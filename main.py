@@ -1,5 +1,5 @@
 import torch
-from utils.tools import find_max_numbered_subfolder
+from utils.tools import create_result_folder
 from models.gru_model import WindSpeedCorrectionModel
 from utils.data_loader import WindSpeedCorrectionDataset
 
@@ -28,7 +28,7 @@ test_loader = dataset.create_test_loader()
 
 # 定义设备，如果GPU可用则使用GPU，否则使用CPU
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-model_save = find_max_numbered_subfolder(folder_path='./result')
+model_save = create_result_folder('result')
 # 假设train_loader, val_loader, test_loader已经定义
 model = WindSpeedCorrectionModel(device,
                                  train_loader,
@@ -42,6 +42,11 @@ model = WindSpeedCorrectionModel(device,
                                  save_interval=20,
                                  save_dir=model_save,)
 
+# 训练模型
+model.train_and_validate(num_epochs=20)
+
 # 测试模型
 model.process_wind_speed_data(test_dir='./data/half_window_size10/test/')
+
+
 
