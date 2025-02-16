@@ -8,21 +8,34 @@ import torch.optim as optim
 from matplotlib import pyplot as plt
 from torch.utils.data import DataLoader
 
+from utils.tools import calculate_sqrt_square_sum
+
 
 class GRUModel(nn.Module):
-    def __init__(self, input_dim, hidden_dim, output_dim, num_layers=1):
+    def __init__(self, input_dim, hidden_dim, output_dim, num_layers=2):
         super(GRUModel, self).__init__()
-        # 定义 GRU 层
-        self.gru = nn.GRU(input_dim, hidden_dim, num_layers, batch_first=True)
+        # 定义双向 GRU 层，num_layers=2 表示两层
+        self.gru = nn.GRU(input_dim, hidden_dim, num_layers, batch_first=True, bidirectional=True)
         # 定义全连接层，用于输出预测值
-        self.fc = nn.Linear(hidden_dim, output_dim)
+        # self.fc = nn.Linear(hidden_dim, output_dim)
+        # 定义四层 MLP
+        self.fc1 = nn.Linear(hidden_dim * 2, 256)  # 由于是双向，hidden_dim 需要乘以 2
+        self.fc2 = nn.Linear(256, 128)
+        self.fc3 = nn.Linear(128, 64)
+        self.fc4 = nn.Linear(64, output_dim)
 
     def forward(self, x):
         # x 的形状: (batch_size, seq_len, input_dim)
         # GRU 层的输出
         gru_out, _ = self.gru(x)
         # 选择最后一个时间步的输出进行回归任务
-        output = self.fc(gru_out[:, :, :])  # (batch_size, output_dim)
+        # output = self.fc(gru_out[:, :, :])  # (batch_size, output_dim)
+        # return output
+        # 通过四层 MLP
+        x = torch.relu(self.fc1(gru_out))
+        x = torch.relu(self.fc2(x))
+        x = torch.relu(self.fc3(x))
+        output = self.fc4(x)  # (batch_size, seq_len, output_dim)
         return output
 
 
@@ -86,6 +99,7 @@ class WindSpeedCorrectionModel:
 
             # 每个epoch结束后，进行一次验证
             self.validate()
+            self.model.train()
 
     def validate(self):
         self.model.eval()  # 设置模型为评估模式，不会计算梯度
@@ -124,8 +138,17 @@ class WindSpeedCorrectionModel:
         """
         self.load_model(path)
         # 获取文件夹内的所有uav和label文件
+        # x.split('_')：将文件名 x 按照下划线字符 _ 分割成多个部分。
+        #
+        # x.split('_')[1]：获取分割后的第二部分，即文件名中的数字部分（例如，对于 uav_001.txt，这部分是 '001.txt'）。
+        #
+        # x.split('_')[1].split('.')[0]：进一步将 '001.txt' 按照点号 . 分割，取第一部分，即 '001'。
+        #
+        # int(x.split('_')[1].split('.')[0])：将 '001' 转换为整数 1。
         uav_files = [f for f in os.listdir(test_dir) if f.startswith('uav')]
         label_files = [f for f in os.listdir(test_dir) if f.startswith('tower')]
+        uav_files.sort(key=lambda x: int(x.split('_')[1].split('.')[0]))
+        label_files.sort(key=lambda x: int(x.split('_')[1].split('.')[0]))
 
         # 检查文件数量是否一致
         assert len(uav_files) == len(label_files), "uav 和 label 文件数量不匹配"
@@ -224,9 +247,12 @@ class WindSpeedCorrectionModel:
 
                 # 绘制修正前后与真实标签对比的图像
                 plt.figure(figsize=(12, 6))
-                plt.plot(final_uav_chunk[:,1], label='修正前（UAV数据）', linestyle='--')
-                plt.plot(final_corrected_data[:,1], label='修正后（模型输出）')
-                plt.plot(final_label_chunk[:,1], label='真实标签（Label）', linestyle=':')
+                uav_uv = calculate_sqrt_square_sum(final_uav_chunk[:,1], final_uav_chunk[:,0])
+                cor_uv = calculate_sqrt_square_sum(final_corrected_data[:,1], final_corrected_data[:,0])
+                lab_uv = calculate_sqrt_square_sum(final_label_chunk[:,1], final_label_chunk[:,0])
+                # plt.plot(final_uav_chunk[:,1], label='修正前（UAV数据）', linestyle='--')
+                plt.plot(cor_uv, label='correction')
+                plt.plot(lab_uv, label='label', linestyle=':')
 
                 plt.legend()
                 plt.xlabel('时间步')

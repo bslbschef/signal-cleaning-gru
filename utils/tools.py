@@ -1,5 +1,24 @@
 import os
 
+import numpy as np
+
+
+def calculate_sqrt_square_sum(a, b):
+    """
+    此函数用于计算两个 NumPy 向量 a 和 b 对应元素平方和的平方根组成的向量
+
+    参数:
+    a (numpy.ndarray): 第一个输入向量
+    b (numpy.ndarray): 第二个输入向量
+
+    返回:
+    numpy.ndarray: 计算得到的结果向量
+    """
+    # 计算平方和向量
+    square_sum_vector = a ** 2 + b ** 2
+    # 对平方和向量取根号
+    result_vector = np.sqrt(square_sum_vector)
+    return result_vector
 
 def create_result_folder1(root_path='result'):
     # 检查 result 文件夹是否存在，如果不存在则创建

@@ -8,7 +8,7 @@ data_root = './data/half_window_size10'  # 数据根目录
 train_dir = '/train'  # 训练数据文件夹
 val_dir = '/val'  # 验证数据文件夹
 test_dir = '/test'  # 测试数据文件夹
-sequence_length = 1200  # 序列长度
+sequence_length = 20*60*1   # 序列长度
 batch_size = 32  # 批次大小
 
 # 实例化 WindSpeedCorrectionDataset
@@ -35,7 +35,7 @@ model = WindSpeedCorrectionModel(device,
                                  val_loader,
                                  test_loader,
                                  input_dim=18,
-                                 hidden_dim=64,
+                                 hidden_dim=128,
                                  output_dim=3,
                                  num_layers=1,
                                  lr=0.001,
@@ -43,5 +43,5 @@ model = WindSpeedCorrectionModel(device,
                                  save_dir=model_save,)
 
 # 测试模型
-model.process_wind_speed_data(test_dir='./data/half_window_size10/test/')
+model.process_wind_speed_data(test_dir='./data/half_window_size10/ttt/')
 
