@@ -1,47 +1,45 @@
+import os
 import torch
-from utils.tools import find_max_numbered_subfolder
-from models.gru_model import WindSpeedCorrectionModel
-from utils.data_loader import WindSpeedCorrectionDataset
+from torch.utils.data import DataLoader
+from datasets.wind_signal_dataset import WindSignalDataset
+from utils.logger_define import CustomLogger
+from utils.args_parser import parse_args
+from models.mlp import MLP
+from models.lstm import LSTM
+from models.gru import GRU
+from models.transformer import Transformer
+from testing.tester import test
+from visualization.plotter import plot_comparison
 
-# 创建WindSpeedCorrectionDataset类的实例
-data_root = './data/half_window_size10'  # 数据根目录
-train_dir = '/train'  # 训练数据文件夹
-val_dir = '/val'  # 验证数据文件夹
-test_dir = '/test'  # 测试数据文件夹
-sequence_length = 20*60*1   # 序列长度
-batch_size = 32  # 批次大小
+if __name__ == '__main__':
+    args = parse_args()
 
-# 实例化 WindSpeedCorrectionDataset
-dataset = WindSpeedCorrectionDataset(
-    data_root=data_root,
-    train_dir=train_dir,
-    val_dir=val_dir,
-    test_dir=test_dir,
-    sequence_length=sequence_length,
-    batch_size=batch_size
-)
+    # 确保图片存储目录存在
+    os.makedirs(args.result_dir, exist_ok=True)
 
-# 获取训练、验证和测试的DataLoader
-train_loader = dataset.create_train_loader()
-val_loader = dataset.create_val_loader()
-test_loader = dataset.create_test_loader()
+    # 测试集评估
+    test_dataset = WindSignalDataset(args.test_input_dir, args.test_label_dir, args.max_seq_len, test_num=1)
+    test_loader = DataLoader(test_dataset, batch_size=1, shuffle=False)  # 测试集使用 batch_size=1
 
-# 定义设备，如果GPU可用则使用GPU，否则使用CPU
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-model_save = find_max_numbered_subfolder(folder_path='./result')
-# 假设train_loader, val_loader, test_loader已经定义
-model = WindSpeedCorrectionModel(device,
-                                 train_loader,
-                                 val_loader,
-                                 test_loader,
-                                 input_dim=18,
-                                 hidden_dim=128,
-                                 output_dim=3,
-                                 num_layers=1,
-                                 lr=0.001,
-                                 save_interval=20,
-                                 save_dir=model_save,)
+    # 加载最佳模型
+    best_model_path = os.path.join(args.model_save_dir, f'best_{args.model}_fold_2.pth')  # 假设使用第一个折的最佳模型
+    model = None
+    if args.model == 'mlp':
+        model = MLP(args.input_size, args.output_size, args.hidden_size, args.max_seq_len)
+    elif args.model == 'lstm':
+        model = LSTM(args.input_size, args.hidden_size, args.num_layers, args.output_size)
+    elif args.model == 'gru':
+        model = GRU(args.input_size, args.hidden_size, args.num_layers)
+    elif args.model == 'transformer':
+        model = Transformer(args.input_size, args.hidden_size, args.nhead,
+                            args.num_layers, args.max_seq_len)
 
-# 测试模型
-model.process_wind_speed_data(test_dir='./data/half_window_size10/ttt/')
+    model.load_state_dict(torch.load(best_model_path))
+    # model.load_state_dict(torch.load(best_model_path), weights_only=True)
+    model.eval()
 
+    # 测试
+    test_results = test(model, test_loader, args)
+
+    # 绘制对比图
+    plot_comparison(test_results, args.model, args.result_dir)

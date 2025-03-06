@@ -1,0 +1,578 @@
+2025-03-05 21:11:08 - INFO - Model save directory: ./model_checkpoints
+2025-03-05 21:11:08 - INFO - Total number of samples: 266
+2025-03-05 21:11:08 - INFO - Fold 1/5
+2025-03-05 21:11:08 - INFO - Number of train samples: 212
+2025-03-05 21:11:08 - INFO - Number of val samples: 54
+2025-03-05 21:11:09 - INFO - Epoch 001 | Val Loss: 94.5173
+2025-03-05 21:11:09 - INFO - Saved best model for fold 1 with Val Loss: 94.5173
+2025-03-05 21:11:09 - INFO - Epoch 002 | Val Loss: 82.2102
+2025-03-05 21:11:09 - INFO - Saved best model for fold 1 with Val Loss: 82.2102
+2025-03-05 21:11:09 - INFO - Epoch 003 | Val Loss: 74.4523
+2025-03-05 21:11:09 - INFO - Saved best model for fold 1 with Val Loss: 74.4523
+2025-03-05 21:11:09 - INFO - Epoch 004 | Val Loss: 67.2271
+2025-03-05 21:11:09 - INFO - Saved best model for fold 1 with Val Loss: 67.2271
+2025-03-05 21:11:09 - INFO - Epoch 005 | Val Loss: 80.4556
+2025-03-05 21:11:09 - INFO - Epoch 006 | Val Loss: 65.3565
+2025-03-05 21:11:09 - INFO - Saved best model for fold 1 with Val Loss: 65.3565
+2025-03-05 21:11:09 - INFO - Epoch 007 | Val Loss: 60.9431
+2025-03-05 21:11:09 - INFO - Saved best model for fold 1 with Val Loss: 60.9431
+2025-03-05 21:11:09 - INFO - Epoch 008 | Val Loss: 56.1129
+2025-03-05 21:11:09 - INFO - Saved best model for fold 1 with Val Loss: 56.1129
+2025-03-05 21:11:09 - INFO - Epoch 009 | Val Loss: 64.5397
+2025-03-05 21:11:09 - INFO - Epoch 010 | Val Loss: 57.0445
+2025-03-05 21:11:09 - INFO - Epoch 011 | Val Loss: 60.1897
+2025-03-05 21:11:09 - INFO - Epoch 012 | Val Loss: 56.4001
+2025-03-05 21:11:09 - INFO - Epoch 013 | Val Loss: 57.9801
+2025-03-05 21:11:09 - INFO - Epoch 014 | Val Loss: 56.4757
+2025-03-05 21:11:10 - INFO - Epoch 015 | Val Loss: 56.3638
+2025-03-05 21:11:10 - INFO - Epoch 016 | Val Loss: 55.2294
+2025-03-05 21:11:10 - INFO - Saved best model for fold 1 with Val Loss: 55.2294
+2025-03-05 21:11:10 - INFO - Epoch 017 | Val Loss: 53.9978
+2025-03-05 21:11:10 - INFO - Saved best model for fold 1 with Val Loss: 53.9978
+2025-03-05 21:11:10 - INFO - Epoch 018 | Val Loss: 51.7041
+2025-03-05 21:11:10 - INFO - Saved best model for fold 1 with Val Loss: 51.7041
+2025-03-05 21:11:10 - INFO - Epoch 019 | Val Loss: 49.8505
+2025-03-05 21:11:10 - INFO - Saved best model for fold 1 with Val Loss: 49.8505
+2025-03-05 21:11:10 - INFO - Epoch 020 | Val Loss: 56.1542
+2025-03-05 21:11:10 - INFO - Epoch 021 | Val Loss: 54.0262
+2025-03-05 21:11:10 - INFO - Epoch 022 | Val Loss: 53.5455
+2025-03-05 21:11:10 - INFO - Epoch 023 | Val Loss: 58.3966
+2025-03-05 21:11:10 - INFO - Epoch 024 | Val Loss: 52.1985
+2025-03-05 21:11:10 - INFO - Epoch 025 | Val Loss: 59.1618
+2025-03-05 21:11:10 - INFO - Epoch 026 | Val Loss: 57.1438
+2025-03-05 21:11:10 - INFO - Epoch 027 | Val Loss: 70.5430
+2025-03-05 21:11:10 - INFO - Epoch 028 | Val Loss: 54.5654
+2025-03-05 21:11:10 - INFO - Epoch 029 | Val Loss: 54.1652
+2025-03-05 21:11:10 - INFO - Epoch 030 | Val Loss: 56.8343
+2025-03-05 21:11:10 - INFO - Epoch 031 | Val Loss: 53.3040
+2025-03-05 21:11:10 - INFO - Epoch 032 | Val Loss: 54.2704
+2025-03-05 21:11:11 - INFO - Epoch 033 | Val Loss: 57.0887
+2025-03-05 21:11:11 - INFO - Epoch 034 | Val Loss: 53.5962
+2025-03-05 21:11:11 - INFO - Epoch 035 | Val Loss: 60.3422
+2025-03-05 21:11:11 - INFO - Epoch 036 | Val Loss: 55.2522
+2025-03-05 21:11:11 - INFO - Epoch 037 | Val Loss: 63.0962
+2025-03-05 21:11:11 - INFO - Epoch 038 | Val Loss: 61.0458
+2025-03-05 21:11:11 - INFO - Epoch 039 | Val Loss: 54.1052
+2025-03-05 21:11:11 - INFO - Epoch 040 | Val Loss: 54.5715
+2025-03-05 21:11:11 - INFO - Epoch 041 | Val Loss: 55.0845
+2025-03-05 21:11:11 - INFO - Epoch 042 | Val Loss: 51.7637
+2025-03-05 21:11:11 - INFO - Epoch 043 | Val Loss: 51.1555
+2025-03-05 21:11:11 - INFO - Epoch 044 | Val Loss: 55.1384
+2025-03-05 21:11:11 - INFO - Epoch 045 | Val Loss: 60.5598
+2025-03-05 21:11:11 - INFO - Epoch 046 | Val Loss: 55.8314
+2025-03-05 21:11:11 - INFO - Epoch 047 | Val Loss: 58.2318
+2025-03-05 21:11:11 - INFO - Epoch 048 | Val Loss: 54.2337
+2025-03-05 21:11:11 - INFO - Epoch 049 | Val Loss: 52.4101
+2025-03-05 21:11:11 - INFO - Epoch 050 | Val Loss: 54.3330
+2025-03-05 21:11:12 - INFO - Epoch 051 | Val Loss: 53.8272
+2025-03-05 21:11:12 - INFO - Epoch 052 | Val Loss: 55.5895
+2025-03-05 21:11:12 - INFO - Epoch 053 | Val Loss: 55.6822
+2025-03-05 21:11:12 - INFO - Epoch 054 | Val Loss: 54.0599
+2025-03-05 21:11:12 - INFO - Epoch 055 | Val Loss: 52.9362
+2025-03-05 21:11:12 - INFO - Epoch 056 | Val Loss: 53.5174
+2025-03-05 21:11:12 - INFO - Epoch 057 | Val Loss: 56.4662
+2025-03-05 21:11:12 - INFO - Epoch 058 | Val Loss: 55.2643
+2025-03-05 21:11:12 - INFO - Epoch 059 | Val Loss: 60.3216
+2025-03-05 21:11:12 - INFO - Epoch 060 | Val Loss: 60.2730
+2025-03-05 21:11:12 - INFO - Epoch 061 | Val Loss: 55.5852
+2025-03-05 21:11:12 - INFO - Epoch 062 | Val Loss: 55.6981
+2025-03-05 21:11:12 - INFO - Epoch 063 | Val Loss: 58.9590
+2025-03-05 21:11:12 - INFO - Epoch 064 | Val Loss: 58.9008
+2025-03-05 21:11:12 - INFO - Epoch 065 | Val Loss: 61.6438
+2025-03-05 21:11:12 - INFO - Epoch 066 | Val Loss: 54.9467
+2025-03-05 21:11:12 - INFO - Epoch 067 | Val Loss: 58.4988
+2025-03-05 21:11:13 - INFO - Epoch 068 | Val Loss: 56.0562
+2025-03-05 21:11:13 - INFO - Epoch 069 | Val Loss: 53.5213
+2025-03-05 21:11:13 - INFO - Epoch 070 | Val Loss: 60.3912
+2025-03-05 21:11:13 - INFO - Epoch 071 | Val Loss: 56.3317
+2025-03-05 21:11:13 - INFO - Epoch 072 | Val Loss: 57.5744
+2025-03-05 21:11:13 - INFO - Epoch 073 | Val Loss: 56.4474
+2025-03-05 21:11:13 - INFO - Epoch 074 | Val Loss: 55.9834
+2025-03-05 21:11:13 - INFO - Epoch 075 | Val Loss: 56.4785
+2025-03-05 21:11:13 - INFO - Epoch 076 | Val Loss: 55.7543
+2025-03-05 21:11:13 - INFO - Epoch 077 | Val Loss: 52.2094
+2025-03-05 21:11:13 - INFO - Epoch 078 | Val Loss: 50.8864
+2025-03-05 21:11:13 - INFO - Epoch 079 | Val Loss: 57.0159
+2025-03-05 21:11:13 - INFO - Epoch 080 | Val Loss: 61.6441
+2025-03-05 21:11:13 - INFO - Epoch 081 | Val Loss: 55.3762
+2025-03-05 21:11:13 - INFO - Epoch 082 | Val Loss: 52.2554
+2025-03-05 21:11:13 - INFO - Epoch 083 | Val Loss: 53.8941
+2025-03-05 21:11:13 - INFO - Epoch 084 | Val Loss: 57.8065
+2025-03-05 21:11:13 - INFO - Epoch 085 | Val Loss: 59.4907
+2025-03-05 21:11:14 - INFO - Epoch 086 | Val Loss: 57.3412
+2025-03-05 21:11:14 - INFO - Epoch 087 | Val Loss: 59.4260
+2025-03-05 21:11:14 - INFO - Epoch 088 | Val Loss: 64.7522
+2025-03-05 21:11:14 - INFO - Epoch 089 | Val Loss: 54.5040
+2025-03-05 21:11:14 - INFO - Epoch 090 | Val Loss: 59.3970
+2025-03-05 21:11:14 - INFO - Epoch 091 | Val Loss: 56.6898
+2025-03-05 21:11:14 - INFO - Epoch 092 | Val Loss: 56.1474
+2025-03-05 21:11:14 - INFO - Epoch 093 | Val Loss: 58.0195
+2025-03-05 21:11:14 - INFO - Epoch 094 | Val Loss: 58.6987
+2025-03-05 21:11:14 - INFO - Epoch 095 | Val Loss: 64.7914
+2025-03-05 21:11:14 - INFO - Epoch 096 | Val Loss: 65.1948
+2025-03-05 21:11:14 - INFO - Epoch 097 | Val Loss: 57.0897
+2025-03-05 21:11:14 - INFO - Epoch 098 | Val Loss: 55.2664
+2025-03-05 21:11:14 - INFO - Epoch 099 | Val Loss: 62.4028
+2025-03-05 21:11:14 - INFO - Epoch 100 | Val Loss: 54.5693
+2025-03-05 21:11:14 - INFO - Fold 1 | Best Val Loss: 49.8505
+2025-03-05 21:11:14 - INFO - Fold 2/5
+2025-03-05 21:11:14 - INFO - Number of train samples: 213
+2025-03-05 21:11:14 - INFO - Number of val samples: 53
+2025-03-05 21:11:14 - INFO - Epoch 001 | Val Loss: 78.1875
+2025-03-05 21:11:14 - INFO - Saved best model for fold 2 with Val Loss: 78.1875
+2025-03-05 21:11:14 - INFO - Epoch 002 | Val Loss: 60.0800
+2025-03-05 21:11:14 - INFO - Saved best model for fold 2 with Val Loss: 60.0800
+2025-03-05 21:11:14 - INFO - Epoch 003 | Val Loss: 56.4399
+2025-03-05 21:11:14 - INFO - Saved best model for fold 2 with Val Loss: 56.4399
+2025-03-05 21:11:15 - INFO - Epoch 004 | Val Loss: 52.2379
+2025-03-05 21:11:15 - INFO - Saved best model for fold 2 with Val Loss: 52.2379
+2025-03-05 21:11:15 - INFO - Epoch 005 | Val Loss: 78.6300
+2025-03-05 21:11:15 - INFO - Epoch 006 | Val Loss: 51.5235
+2025-03-05 21:11:15 - INFO - Saved best model for fold 2 with Val Loss: 51.5235
+2025-03-05 21:11:15 - INFO - Epoch 007 | Val Loss: 46.0139
+2025-03-05 21:11:15 - INFO - Saved best model for fold 2 with Val Loss: 46.0139
+2025-03-05 21:11:15 - INFO - Epoch 008 | Val Loss: 52.8317
+2025-03-05 21:11:15 - INFO - Epoch 009 | Val Loss: 43.7579
+2025-03-05 21:11:15 - INFO - Saved best model for fold 2 with Val Loss: 43.7579
+2025-03-05 21:11:15 - INFO - Epoch 010 | Val Loss: 45.8158
+2025-03-05 21:11:15 - INFO - Epoch 011 | Val Loss: 41.7278
+2025-03-05 21:11:15 - INFO - Saved best model for fold 2 with Val Loss: 41.7278
+2025-03-05 21:11:15 - INFO - Epoch 012 | Val Loss: 41.7982
+2025-03-05 21:11:15 - INFO - Epoch 013 | Val Loss: 41.0509
+2025-03-05 21:11:15 - INFO - Saved best model for fold 2 with Val Loss: 41.0509
+2025-03-05 21:11:15 - INFO - Epoch 014 | Val Loss: 49.5110
+2025-03-05 21:11:15 - INFO - Epoch 015 | Val Loss: 39.2664
+2025-03-05 21:11:15 - INFO - Saved best model for fold 2 with Val Loss: 39.2664
+2025-03-05 21:11:15 - INFO - Epoch 016 | Val Loss: 40.5378
+2025-03-05 21:11:15 - INFO - Epoch 017 | Val Loss: 39.4947
+2025-03-05 21:11:15 - INFO - Epoch 018 | Val Loss: 40.3540
+2025-03-05 21:11:15 - INFO - Epoch 019 | Val Loss: 44.1898
+2025-03-05 21:11:15 - INFO - Epoch 020 | Val Loss: 46.5360
+2025-03-05 21:11:16 - INFO - Epoch 021 | Val Loss: 44.1774
+2025-03-05 21:11:16 - INFO - Epoch 022 | Val Loss: 54.6015
+2025-03-05 21:11:16 - INFO - Epoch 023 | Val Loss: 50.4505
+2025-03-05 21:11:16 - INFO - Epoch 024 | Val Loss: 46.1793
+2025-03-05 21:11:16 - INFO - Epoch 025 | Val Loss: 54.7311
+2025-03-05 21:11:16 - INFO - Epoch 026 | Val Loss: 56.3775
+2025-03-05 21:11:16 - INFO - Epoch 027 | Val Loss: 44.6346
+2025-03-05 21:11:16 - INFO - Epoch 028 | Val Loss: 49.1813
+2025-03-05 21:11:16 - INFO - Epoch 029 | Val Loss: 57.4153
+2025-03-05 21:11:16 - INFO - Epoch 030 | Val Loss: 49.4306
+2025-03-05 21:11:16 - INFO - Epoch 031 | Val Loss: 52.7182
+2025-03-05 21:11:16 - INFO - Epoch 032 | Val Loss: 45.8400
+2025-03-05 21:11:16 - INFO - Epoch 033 | Val Loss: 49.6205
+2025-03-05 21:11:16 - INFO - Epoch 034 | Val Loss: 43.1467
+2025-03-05 21:11:16 - INFO - Epoch 035 | Val Loss: 41.1007
+2025-03-05 21:11:16 - INFO - Epoch 036 | Val Loss: 43.2282
+2025-03-05 21:11:16 - INFO - Epoch 037 | Val Loss: 41.7033
+2025-03-05 21:11:16 - INFO - Epoch 038 | Val Loss: 40.2408
+2025-03-05 21:11:17 - INFO - Epoch 039 | Val Loss: 45.2706
+2025-03-05 21:11:17 - INFO - Epoch 040 | Val Loss: 48.8071
+2025-03-05 21:11:17 - INFO - Epoch 041 | Val Loss: 43.3021
+2025-03-05 21:11:17 - INFO - Epoch 042 | Val Loss: 49.6133
+2025-03-05 21:11:17 - INFO - Epoch 043 | Val Loss: 40.6509
+2025-03-05 21:11:17 - INFO - Epoch 044 | Val Loss: 46.8628
+2025-03-05 21:11:17 - INFO - Epoch 045 | Val Loss: 45.5115
+2025-03-05 21:11:17 - INFO - Epoch 046 | Val Loss: 46.1203
+2025-03-05 21:11:17 - INFO - Epoch 047 | Val Loss: 47.1375
+2025-03-05 21:11:17 - INFO - Epoch 048 | Val Loss: 41.9319
+2025-03-05 21:11:17 - INFO - Epoch 049 | Val Loss: 42.3631
+2025-03-05 21:11:17 - INFO - Epoch 050 | Val Loss: 46.5957
+2025-03-05 21:11:17 - INFO - Epoch 051 | Val Loss: 46.0113
+2025-03-05 21:11:17 - INFO - Epoch 052 | Val Loss: 41.6707
+2025-03-05 21:11:17 - INFO - Epoch 053 | Val Loss: 44.2899
+2025-03-05 21:11:17 - INFO - Epoch 054 | Val Loss: 45.6776
+2025-03-05 21:11:17 - INFO - Epoch 055 | Val Loss: 42.5524
+2025-03-05 21:11:18 - INFO - Epoch 056 | Val Loss: 46.7926
+2025-03-05 21:11:18 - INFO - Epoch 057 | Val Loss: 43.0171
+2025-03-05 21:11:18 - INFO - Epoch 058 | Val Loss: 45.7647
+2025-03-05 21:11:18 - INFO - Epoch 059 | Val Loss: 46.7521
+2025-03-05 21:11:18 - INFO - Epoch 060 | Val Loss: 44.2296
+2025-03-05 21:11:18 - INFO - Epoch 061 | Val Loss: 47.6899
+2025-03-05 21:11:18 - INFO - Epoch 062 | Val Loss: 47.4411
+2025-03-05 21:11:18 - INFO - Epoch 063 | Val Loss: 50.5092
+2025-03-05 21:11:18 - INFO - Epoch 064 | Val Loss: 75.7622
+2025-03-05 21:11:18 - INFO - Epoch 065 | Val Loss: 61.1642
+2025-03-05 21:11:18 - INFO - Epoch 066 | Val Loss: 72.4552
+2025-03-05 21:11:18 - INFO - Epoch 067 | Val Loss: 62.2896
+2025-03-05 21:11:18 - INFO - Epoch 068 | Val Loss: 53.5864
+2025-03-05 21:11:18 - INFO - Epoch 069 | Val Loss: 49.3156
+2025-03-05 21:11:18 - INFO - Epoch 070 | Val Loss: 48.2229
+2025-03-05 21:11:18 - INFO - Epoch 071 | Val Loss: 43.7167
+2025-03-05 21:11:18 - INFO - Epoch 072 | Val Loss: 43.7492
+2025-03-05 21:11:18 - INFO - Epoch 073 | Val Loss: 46.5010
+2025-03-05 21:11:19 - INFO - Epoch 074 | Val Loss: 41.2193
+2025-03-05 21:11:19 - INFO - Epoch 075 | Val Loss: 46.1249
+2025-03-05 21:11:19 - INFO - Epoch 076 | Val Loss: 49.0343
+2025-03-05 21:11:19 - INFO - Epoch 077 | Val Loss: 53.4374
+2025-03-05 21:11:19 - INFO - Epoch 078 | Val Loss: 55.7742
+2025-03-05 21:11:19 - INFO - Epoch 079 | Val Loss: 57.0692
+2025-03-05 21:11:19 - INFO - Epoch 080 | Val Loss: 47.0432
+2025-03-05 21:11:19 - INFO - Epoch 081 | Val Loss: 45.7783
+2025-03-05 21:11:19 - INFO - Epoch 082 | Val Loss: 43.6191
+2025-03-05 21:11:19 - INFO - Epoch 083 | Val Loss: 59.5424
+2025-03-05 21:11:19 - INFO - Epoch 084 | Val Loss: 43.6764
+2025-03-05 21:11:19 - INFO - Epoch 085 | Val Loss: 45.1342
+2025-03-05 21:11:19 - INFO - Epoch 086 | Val Loss: 45.7039
+2025-03-05 21:11:19 - INFO - Epoch 087 | Val Loss: 48.5606
+2025-03-05 21:11:19 - INFO - Epoch 088 | Val Loss: 40.1861
+2025-03-05 21:11:19 - INFO - Epoch 089 | Val Loss: 41.6833
+2025-03-05 21:11:19 - INFO - Epoch 090 | Val Loss: 48.9465
+2025-03-05 21:11:20 - INFO - Epoch 091 | Val Loss: 68.3960
+2025-03-05 21:11:20 - INFO - Epoch 092 | Val Loss: 94.9896
+2025-03-05 21:11:20 - INFO - Epoch 093 | Val Loss: 192.6609
+2025-03-05 21:11:20 - INFO - Epoch 094 | Val Loss: 133.2582
+2025-03-05 21:11:20 - INFO - Epoch 095 | Val Loss: 65.0907
+2025-03-05 21:11:20 - INFO - Epoch 096 | Val Loss: 45.7189
+2025-03-05 21:11:20 - INFO - Epoch 097 | Val Loss: 50.9159
+2025-03-05 21:11:20 - INFO - Epoch 098 | Val Loss: 47.8005
+2025-03-05 21:11:20 - INFO - Epoch 099 | Val Loss: 51.8476
+2025-03-05 21:11:20 - INFO - Epoch 100 | Val Loss: 45.5729
+2025-03-05 21:11:20 - INFO - Fold 2 | Best Val Loss: 39.2664
+2025-03-05 21:11:20 - INFO - Fold 3/5
+2025-03-05 21:11:20 - INFO - Number of train samples: 213
+2025-03-05 21:11:20 - INFO - Number of val samples: 53
+2025-03-05 21:11:20 - INFO - Epoch 001 | Val Loss: 75.1253
+2025-03-05 21:11:20 - INFO - Saved best model for fold 3 with Val Loss: 75.1253
+2025-03-05 21:11:20 - INFO - Epoch 002 | Val Loss: 79.8801
+2025-03-05 21:11:20 - INFO - Epoch 003 | Val Loss: 54.0625
+2025-03-05 21:11:20 - INFO - Saved best model for fold 3 with Val Loss: 54.0625
+2025-03-05 21:11:20 - INFO - Epoch 004 | Val Loss: 59.3872
+2025-03-05 21:11:20 - INFO - Epoch 005 | Val Loss: 50.7574
+2025-03-05 21:11:20 - INFO - Saved best model for fold 3 with Val Loss: 50.7574
+2025-03-05 21:11:20 - INFO - Epoch 006 | Val Loss: 50.9744
+2025-03-05 21:11:20 - INFO - Epoch 007 | Val Loss: 49.0536
+2025-03-05 21:11:20 - INFO - Saved best model for fold 3 with Val Loss: 49.0536
+2025-03-05 21:11:20 - INFO - Epoch 008 | Val Loss: 51.9724
+2025-03-05 21:11:21 - INFO - Epoch 009 | Val Loss: 46.3252
+2025-03-05 21:11:21 - INFO - Saved best model for fold 3 with Val Loss: 46.3252
+2025-03-05 21:11:21 - INFO - Epoch 010 | Val Loss: 50.7055
+2025-03-05 21:11:21 - INFO - Epoch 011 | Val Loss: 45.4821
+2025-03-05 21:11:21 - INFO - Saved best model for fold 3 with Val Loss: 45.4821
+2025-03-05 21:11:21 - INFO - Epoch 012 | Val Loss: 55.3593
+2025-03-05 21:11:21 - INFO - Epoch 013 | Val Loss: 47.3652
+2025-03-05 21:11:21 - INFO - Epoch 014 | Val Loss: 44.6956
+2025-03-05 21:11:21 - INFO - Saved best model for fold 3 with Val Loss: 44.6956
+2025-03-05 21:11:21 - INFO - Epoch 015 | Val Loss: 48.3262
+2025-03-05 21:11:21 - INFO - Epoch 016 | Val Loss: 45.6884
+2025-03-05 21:11:21 - INFO - Epoch 017 | Val Loss: 47.6520
+2025-03-05 21:11:21 - INFO - Epoch 018 | Val Loss: 46.0465
+2025-03-05 21:11:21 - INFO - Epoch 019 | Val Loss: 43.5729
+2025-03-05 21:11:21 - INFO - Saved best model for fold 3 with Val Loss: 43.5729
+2025-03-05 21:11:21 - INFO - Epoch 020 | Val Loss: 46.1938
+2025-03-05 21:11:21 - INFO - Epoch 021 | Val Loss: 44.5906
+2025-03-05 21:11:21 - INFO - Epoch 022 | Val Loss: 47.5479
+2025-03-05 21:11:21 - INFO - Epoch 023 | Val Loss: 45.8007
+2025-03-05 21:11:21 - INFO - Epoch 024 | Val Loss: 48.8497
+2025-03-05 21:11:21 - INFO - Epoch 025 | Val Loss: 45.1017
+2025-03-05 21:11:22 - INFO - Epoch 026 | Val Loss: 48.0434
+2025-03-05 21:11:22 - INFO - Epoch 027 | Val Loss: 43.3510
+2025-03-05 21:11:22 - INFO - Saved best model for fold 3 with Val Loss: 43.3510
+2025-03-05 21:11:22 - INFO - Epoch 028 | Val Loss: 45.5342
+2025-03-05 21:11:22 - INFO - Epoch 029 | Val Loss: 42.9574
+2025-03-05 21:11:22 - INFO - Saved best model for fold 3 with Val Loss: 42.9574
+2025-03-05 21:11:22 - INFO - Epoch 030 | Val Loss: 46.2717
+2025-03-05 21:11:22 - INFO - Epoch 031 | Val Loss: 42.3300
+2025-03-05 21:11:22 - INFO - Saved best model for fold 3 with Val Loss: 42.3300
+2025-03-05 21:11:22 - INFO - Epoch 032 | Val Loss: 50.2075
+2025-03-05 21:11:22 - INFO - Epoch 033 | Val Loss: 46.7046
+2025-03-05 21:11:22 - INFO - Epoch 034 | Val Loss: 52.7052
+2025-03-05 21:11:22 - INFO - Epoch 035 | Val Loss: 42.8167
+2025-03-05 21:11:22 - INFO - Epoch 036 | Val Loss: 43.0567
+2025-03-05 21:11:22 - INFO - Epoch 037 | Val Loss: 48.2558
+2025-03-05 21:11:22 - INFO - Epoch 038 | Val Loss: 47.4050
+2025-03-05 21:11:22 - INFO - Epoch 039 | Val Loss: 48.5790
+2025-03-05 21:11:22 - INFO - Epoch 040 | Val Loss: 46.4384
+2025-03-05 21:11:22 - INFO - Epoch 041 | Val Loss: 44.7964
+2025-03-05 21:11:22 - INFO - Epoch 042 | Val Loss: 45.7727
+2025-03-05 21:11:22 - INFO - Epoch 043 | Val Loss: 46.7398
+2025-03-05 21:11:23 - INFO - Epoch 044 | Val Loss: 47.3904
+2025-03-05 21:11:23 - INFO - Epoch 045 | Val Loss: 48.8868
+2025-03-05 21:11:23 - INFO - Epoch 046 | Val Loss: 44.9948
+2025-03-05 21:11:23 - INFO - Epoch 047 | Val Loss: 44.7268
+2025-03-05 21:11:23 - INFO - Epoch 048 | Val Loss: 43.8085
+2025-03-05 21:11:23 - INFO - Epoch 049 | Val Loss: 43.9274
+2025-03-05 21:11:23 - INFO - Epoch 050 | Val Loss: 45.5644
+2025-03-05 21:11:23 - INFO - Epoch 051 | Val Loss: 44.8807
+2025-03-05 21:11:23 - INFO - Epoch 052 | Val Loss: 44.3908
+2025-03-05 21:11:23 - INFO - Epoch 053 | Val Loss: 50.4209
+2025-03-05 21:11:23 - INFO - Epoch 054 | Val Loss: 47.5546
+2025-03-05 21:11:23 - INFO - Epoch 055 | Val Loss: 49.1173
+2025-03-05 21:11:23 - INFO - Epoch 056 | Val Loss: 48.3792
+2025-03-05 21:11:23 - INFO - Epoch 057 | Val Loss: 48.0770
+2025-03-05 21:11:23 - INFO - Epoch 058 | Val Loss: 46.1991
+2025-03-05 21:11:23 - INFO - Epoch 059 | Val Loss: 47.8050
+2025-03-05 21:11:23 - INFO - Epoch 060 | Val Loss: 47.3241
+2025-03-05 21:11:24 - INFO - Epoch 061 | Val Loss: 46.6216
+2025-03-05 21:11:24 - INFO - Epoch 062 | Val Loss: 46.5419
+2025-03-05 21:11:24 - INFO - Epoch 063 | Val Loss: 48.9226
+2025-03-05 21:11:24 - INFO - Epoch 064 | Val Loss: 53.5139
+2025-03-05 21:11:24 - INFO - Epoch 065 | Val Loss: 44.8437
+2025-03-05 21:11:24 - INFO - Epoch 066 | Val Loss: 44.9978
+2025-03-05 21:11:24 - INFO - Epoch 067 | Val Loss: 49.9142
+2025-03-05 21:11:24 - INFO - Epoch 068 | Val Loss: 45.2779
+2025-03-05 21:11:24 - INFO - Epoch 069 | Val Loss: 48.4373
+2025-03-05 21:11:24 - INFO - Epoch 070 | Val Loss: 45.0043
+2025-03-05 21:11:24 - INFO - Epoch 071 | Val Loss: 48.2712
+2025-03-05 21:11:24 - INFO - Epoch 072 | Val Loss: 47.2193
+2025-03-05 21:11:24 - INFO - Epoch 073 | Val Loss: 50.2837
+2025-03-05 21:11:24 - INFO - Epoch 074 | Val Loss: 49.0233
+2025-03-05 21:11:24 - INFO - Epoch 075 | Val Loss: 53.8243
+2025-03-05 21:11:24 - INFO - Epoch 076 | Val Loss: 48.1113
+2025-03-05 21:11:24 - INFO - Epoch 077 | Val Loss: 49.5725
+2025-03-05 21:11:24 - INFO - Epoch 078 | Val Loss: 50.3512
+2025-03-05 21:11:25 - INFO - Epoch 079 | Val Loss: 51.8435
+2025-03-05 21:11:25 - INFO - Epoch 080 | Val Loss: 50.2434
+2025-03-05 21:11:25 - INFO - Epoch 081 | Val Loss: 47.4091
+2025-03-05 21:11:25 - INFO - Epoch 082 | Val Loss: 48.9287
+2025-03-05 21:11:25 - INFO - Epoch 083 | Val Loss: 49.2780
+2025-03-05 21:11:25 - INFO - Epoch 084 | Val Loss: 44.6956
+2025-03-05 21:11:25 - INFO - Epoch 085 | Val Loss: 50.5292
+2025-03-05 21:11:25 - INFO - Epoch 086 | Val Loss: 50.6439
+2025-03-05 21:11:25 - INFO - Epoch 087 | Val Loss: 47.1418
+2025-03-05 21:11:25 - INFO - Epoch 088 | Val Loss: 47.2592
+2025-03-05 21:11:25 - INFO - Epoch 089 | Val Loss: 46.2795
+2025-03-05 21:11:25 - INFO - Epoch 090 | Val Loss: 48.2656
+2025-03-05 21:11:25 - INFO - Epoch 091 | Val Loss: 46.3133
+2025-03-05 21:11:25 - INFO - Epoch 092 | Val Loss: 45.9994
+2025-03-05 21:11:25 - INFO - Epoch 093 | Val Loss: 49.1586
+2025-03-05 21:11:25 - INFO - Epoch 094 | Val Loss: 46.9196
+2025-03-05 21:11:25 - INFO - Epoch 095 | Val Loss: 47.9024
+2025-03-05 21:11:26 - INFO - Epoch 096 | Val Loss: 69.3557
+2025-03-05 21:11:26 - INFO - Epoch 097 | Val Loss: 49.1534
+2025-03-05 21:11:26 - INFO - Epoch 098 | Val Loss: 46.4762
+2025-03-05 21:11:26 - INFO - Epoch 099 | Val Loss: 51.5882
+2025-03-05 21:11:26 - INFO - Epoch 100 | Val Loss: 47.5406
+2025-03-05 21:11:26 - INFO - Fold 3 | Best Val Loss: 42.3300
+2025-03-05 21:11:26 - INFO - Fold 4/5
+2025-03-05 21:11:26 - INFO - Number of train samples: 213
+2025-03-05 21:11:26 - INFO - Number of val samples: 53
+2025-03-05 21:11:26 - INFO - Epoch 001 | Val Loss: 81.3067
+2025-03-05 21:11:26 - INFO - Saved best model for fold 4 with Val Loss: 81.3067
+2025-03-05 21:11:26 - INFO - Epoch 002 | Val Loss: 124.6904
+2025-03-05 21:11:26 - INFO - Epoch 003 | Val Loss: 51.0469
+2025-03-05 21:11:26 - INFO - Saved best model for fold 4 with Val Loss: 51.0469
+2025-03-05 21:11:26 - INFO - Epoch 004 | Val Loss: 57.5257
+2025-03-05 21:11:26 - INFO - Epoch 005 | Val Loss: 53.5379
+2025-03-05 21:11:26 - INFO - Epoch 006 | Val Loss: 57.8304
+2025-03-05 21:11:26 - INFO - Epoch 007 | Val Loss: 46.3956
+2025-03-05 21:11:26 - INFO - Saved best model for fold 4 with Val Loss: 46.3956
+2025-03-05 21:11:26 - INFO - Epoch 008 | Val Loss: 46.4396
+2025-03-05 21:11:26 - INFO - Epoch 009 | Val Loss: 42.8554
+2025-03-05 21:11:26 - INFO - Saved best model for fold 4 with Val Loss: 42.8554
+2025-03-05 21:11:26 - INFO - Epoch 010 | Val Loss: 53.4085
+2025-03-05 21:11:26 - INFO - Epoch 011 | Val Loss: 42.9035
+2025-03-05 21:11:26 - INFO - Epoch 012 | Val Loss: 40.0443
+2025-03-05 21:11:26 - INFO - Saved best model for fold 4 with Val Loss: 40.0443
+2025-03-05 21:11:27 - INFO - Epoch 013 | Val Loss: 40.9524
+2025-03-05 21:11:27 - INFO - Epoch 014 | Val Loss: 42.7417
+2025-03-05 21:11:27 - INFO - Epoch 015 | Val Loss: 44.0691
+2025-03-05 21:11:27 - INFO - Epoch 016 | Val Loss: 47.2476
+2025-03-05 21:11:27 - INFO - Epoch 017 | Val Loss: 38.3832
+2025-03-05 21:11:27 - INFO - Saved best model for fold 4 with Val Loss: 38.3832
+2025-03-05 21:11:27 - INFO - Epoch 018 | Val Loss: 38.7414
+2025-03-05 21:11:27 - INFO - Epoch 019 | Val Loss: 42.2093
+2025-03-05 21:11:27 - INFO - Epoch 020 | Val Loss: 46.1064
+2025-03-05 21:11:27 - INFO - Epoch 021 | Val Loss: 41.0550
+2025-03-05 21:11:27 - INFO - Epoch 022 | Val Loss: 44.6151
+2025-03-05 21:11:27 - INFO - Epoch 023 | Val Loss: 38.2031
+2025-03-05 21:11:27 - INFO - Saved best model for fold 4 with Val Loss: 38.2031
+2025-03-05 21:11:27 - INFO - Epoch 024 | Val Loss: 45.5918
+2025-03-05 21:11:27 - INFO - Epoch 025 | Val Loss: 44.3752
+2025-03-05 21:11:27 - INFO - Epoch 026 | Val Loss: 40.3066
+2025-03-05 21:11:27 - INFO - Epoch 027 | Val Loss: 44.9033
+2025-03-05 21:11:27 - INFO - Epoch 028 | Val Loss: 53.1066
+2025-03-05 21:11:27 - INFO - Epoch 029 | Val Loss: 40.8299
+2025-03-05 21:11:27 - INFO - Epoch 030 | Val Loss: 39.6917
+2025-03-05 21:11:28 - INFO - Epoch 031 | Val Loss: 37.7635
+2025-03-05 21:11:28 - INFO - Saved best model for fold 4 with Val Loss: 37.7635
+2025-03-05 21:11:28 - INFO - Epoch 032 | Val Loss: 41.5667
+2025-03-05 21:11:28 - INFO - Epoch 033 | Val Loss: 39.9962
+2025-03-05 21:11:28 - INFO - Epoch 034 | Val Loss: 39.6086
+2025-03-05 21:11:28 - INFO - Epoch 035 | Val Loss: 41.3140
+2025-03-05 21:11:28 - INFO - Epoch 036 | Val Loss: 39.8303
+2025-03-05 21:11:28 - INFO - Epoch 037 | Val Loss: 39.5063
+2025-03-05 21:11:28 - INFO - Epoch 038 | Val Loss: 51.7258
+2025-03-05 21:11:28 - INFO - Epoch 039 | Val Loss: 44.2462
+2025-03-05 21:11:28 - INFO - Epoch 040 | Val Loss: 45.2579
+2025-03-05 21:11:28 - INFO - Epoch 041 | Val Loss: 47.7831
+2025-03-05 21:11:28 - INFO - Epoch 042 | Val Loss: 45.1307
+2025-03-05 21:11:28 - INFO - Epoch 043 | Val Loss: 45.3943
+2025-03-05 21:11:28 - INFO - Epoch 044 | Val Loss: 40.1821
+2025-03-05 21:11:28 - INFO - Epoch 045 | Val Loss: 41.0799
+2025-03-05 21:11:28 - INFO - Epoch 046 | Val Loss: 40.6834
+2025-03-05 21:11:28 - INFO - Epoch 047 | Val Loss: 42.9046
+2025-03-05 21:11:28 - INFO - Epoch 048 | Val Loss: 40.2229
+2025-03-05 21:11:29 - INFO - Epoch 049 | Val Loss: 47.9631
+2025-03-05 21:11:29 - INFO - Epoch 050 | Val Loss: 41.1834
+2025-03-05 21:11:29 - INFO - Epoch 051 | Val Loss: 40.4388
+2025-03-05 21:11:29 - INFO - Epoch 052 | Val Loss: 38.8156
+2025-03-05 21:11:29 - INFO - Epoch 053 | Val Loss: 43.2473
+2025-03-05 21:11:29 - INFO - Epoch 054 | Val Loss: 39.5902
+2025-03-05 21:11:29 - INFO - Epoch 055 | Val Loss: 43.3501
+2025-03-05 21:11:29 - INFO - Epoch 056 | Val Loss: 38.5396
+2025-03-05 21:11:29 - INFO - Epoch 057 | Val Loss: 40.1362
+2025-03-05 21:11:29 - INFO - Epoch 058 | Val Loss: 39.0455
+2025-03-05 21:11:29 - INFO - Epoch 059 | Val Loss: 41.9993
+2025-03-05 21:11:29 - INFO - Epoch 060 | Val Loss: 44.3240
+2025-03-05 21:11:29 - INFO - Epoch 061 | Val Loss: 42.5949
+2025-03-05 21:11:29 - INFO - Epoch 062 | Val Loss: 43.0535
+2025-03-05 21:11:29 - INFO - Epoch 063 | Val Loss: 52.9833
+2025-03-05 21:11:29 - INFO - Epoch 064 | Val Loss: 40.3432
+2025-03-05 21:11:29 - INFO - Epoch 065 | Val Loss: 43.7554
+2025-03-05 21:11:30 - INFO - Epoch 066 | Val Loss: 41.9015
+2025-03-05 21:11:30 - INFO - Epoch 067 | Val Loss: 40.8241
+2025-03-05 21:11:30 - INFO - Epoch 068 | Val Loss: 40.9479
+2025-03-05 21:11:30 - INFO - Epoch 069 | Val Loss: 40.3687
+2025-03-05 21:11:30 - INFO - Epoch 070 | Val Loss: 43.5189
+2025-03-05 21:11:30 - INFO - Epoch 071 | Val Loss: 44.4536
+2025-03-05 21:11:30 - INFO - Epoch 072 | Val Loss: 42.2760
+2025-03-05 21:11:30 - INFO - Epoch 073 | Val Loss: 49.6452
+2025-03-05 21:11:30 - INFO - Epoch 074 | Val Loss: 39.5175
+2025-03-05 21:11:30 - INFO - Epoch 075 | Val Loss: 44.9641
+2025-03-05 21:11:30 - INFO - Epoch 076 | Val Loss: 45.1159
+2025-03-05 21:11:30 - INFO - Epoch 077 | Val Loss: 40.9589
+2025-03-05 21:11:30 - INFO - Epoch 078 | Val Loss: 44.7034
+2025-03-05 21:11:30 - INFO - Epoch 079 | Val Loss: 44.4490
+2025-03-05 21:11:30 - INFO - Epoch 080 | Val Loss: 43.3476
+2025-03-05 21:11:30 - INFO - Epoch 081 | Val Loss: 45.3937
+2025-03-05 21:11:30 - INFO - Epoch 082 | Val Loss: 41.3312
+2025-03-05 21:11:30 - INFO - Epoch 083 | Val Loss: 42.4716
+2025-03-05 21:11:31 - INFO - Epoch 084 | Val Loss: 42.1087
+2025-03-05 21:11:31 - INFO - Epoch 085 | Val Loss: 47.5443
+2025-03-05 21:11:31 - INFO - Epoch 086 | Val Loss: 43.5662
+2025-03-05 21:11:31 - INFO - Epoch 087 | Val Loss: 43.2669
+2025-03-05 21:11:31 - INFO - Epoch 088 | Val Loss: 47.6099
+2025-03-05 21:11:31 - INFO - Epoch 089 | Val Loss: 54.0026
+2025-03-05 21:11:31 - INFO - Epoch 090 | Val Loss: 41.4748
+2025-03-05 21:11:31 - INFO - Epoch 091 | Val Loss: 40.8523
+2025-03-05 21:11:31 - INFO - Epoch 092 | Val Loss: 44.5229
+2025-03-05 21:11:31 - INFO - Epoch 093 | Val Loss: 47.3058
+2025-03-05 21:11:31 - INFO - Epoch 094 | Val Loss: 48.0154
+2025-03-05 21:11:31 - INFO - Epoch 095 | Val Loss: 46.5986
+2025-03-05 21:11:31 - INFO - Epoch 096 | Val Loss: 44.6199
+2025-03-05 21:11:31 - INFO - Epoch 097 | Val Loss: 44.7043
+2025-03-05 21:11:31 - INFO - Epoch 098 | Val Loss: 44.1369
+2025-03-05 21:11:31 - INFO - Epoch 099 | Val Loss: 43.4869
+2025-03-05 21:11:31 - INFO - Epoch 100 | Val Loss: 44.5536
+2025-03-05 21:11:31 - INFO - Fold 4 | Best Val Loss: 37.7635
+2025-03-05 21:11:31 - INFO - Fold 5/5
+2025-03-05 21:11:31 - INFO - Number of train samples: 213
+2025-03-05 21:11:31 - INFO - Number of val samples: 53
+2025-03-05 21:11:31 - INFO - Epoch 001 | Val Loss: 95.1997
+2025-03-05 21:11:31 - INFO - Saved best model for fold 5 with Val Loss: 95.1997
+2025-03-05 21:11:32 - INFO - Epoch 002 | Val Loss: 83.4429
+2025-03-05 21:11:32 - INFO - Saved best model for fold 5 with Val Loss: 83.4429
+2025-03-05 21:11:32 - INFO - Epoch 003 | Val Loss: 54.6164
+2025-03-05 21:11:32 - INFO - Saved best model for fold 5 with Val Loss: 54.6164
+2025-03-05 21:11:32 - INFO - Epoch 004 | Val Loss: 46.5173
+2025-03-05 21:11:32 - INFO - Saved best model for fold 5 with Val Loss: 46.5173
+2025-03-05 21:11:32 - INFO - Epoch 005 | Val Loss: 53.9643
+2025-03-05 21:11:32 - INFO - Epoch 006 | Val Loss: 52.7782
+2025-03-05 21:11:32 - INFO - Epoch 007 | Val Loss: 49.9887
+2025-03-05 21:11:32 - INFO - Epoch 008 | Val Loss: 48.4384
+2025-03-05 21:11:32 - INFO - Epoch 009 | Val Loss: 47.2289
+2025-03-05 21:11:32 - INFO - Epoch 010 | Val Loss: 50.8216
+2025-03-05 21:11:32 - INFO - Epoch 011 | Val Loss: 44.5172
+2025-03-05 21:11:32 - INFO - Saved best model for fold 5 with Val Loss: 44.5172
+2025-03-05 21:11:32 - INFO - Epoch 012 | Val Loss: 47.8874
+2025-03-05 21:11:32 - INFO - Epoch 013 | Val Loss: 47.2420
+2025-03-05 21:11:32 - INFO - Epoch 014 | Val Loss: 42.4029
+2025-03-05 21:11:32 - INFO - Saved best model for fold 5 with Val Loss: 42.4029
+2025-03-05 21:11:32 - INFO - Epoch 015 | Val Loss: 41.3418
+2025-03-05 21:11:32 - INFO - Saved best model for fold 5 with Val Loss: 41.3418
+2025-03-05 21:11:32 - INFO - Epoch 016 | Val Loss: 43.1744
+2025-03-05 21:11:32 - INFO - Epoch 017 | Val Loss: 42.8932
+2025-03-05 21:11:32 - INFO - Epoch 018 | Val Loss: 42.0635
+2025-03-05 21:11:33 - INFO - Epoch 019 | Val Loss: 43.4662
+2025-03-05 21:11:33 - INFO - Epoch 020 | Val Loss: 42.9722
+2025-03-05 21:11:33 - INFO - Epoch 021 | Val Loss: 43.3464
+2025-03-05 21:11:33 - INFO - Epoch 022 | Val Loss: 45.0722
+2025-03-05 21:11:33 - INFO - Epoch 023 | Val Loss: 41.8828
+2025-03-05 21:11:33 - INFO - Epoch 024 | Val Loss: 42.5438
+2025-03-05 21:11:33 - INFO - Epoch 025 | Val Loss: 43.9652
+2025-03-05 21:11:33 - INFO - Epoch 026 | Val Loss: 39.4398
+2025-03-05 21:11:33 - INFO - Saved best model for fold 5 with Val Loss: 39.4398
+2025-03-05 21:11:33 - INFO - Epoch 027 | Val Loss: 42.1379
+2025-03-05 21:11:33 - INFO - Epoch 028 | Val Loss: 38.9739
+2025-03-05 21:11:33 - INFO - Saved best model for fold 5 with Val Loss: 38.9739
+2025-03-05 21:11:33 - INFO - Epoch 029 | Val Loss: 44.8413
+2025-03-05 21:11:33 - INFO - Epoch 030 | Val Loss: 47.0495
+2025-03-05 21:11:33 - INFO - Epoch 031 | Val Loss: 46.5816
+2025-03-05 21:11:33 - INFO - Epoch 032 | Val Loss: 50.4518
+2025-03-05 21:11:33 - INFO - Epoch 033 | Val Loss: 48.1985
+2025-03-05 21:11:33 - INFO - Epoch 034 | Val Loss: 45.2155
+2025-03-05 21:11:33 - INFO - Epoch 035 | Val Loss: 54.0839
+2025-03-05 21:11:33 - INFO - Epoch 036 | Val Loss: 44.9719
+2025-03-05 21:11:34 - INFO - Epoch 037 | Val Loss: 45.0690
+2025-03-05 21:11:34 - INFO - Epoch 038 | Val Loss: 46.0656
+2025-03-05 21:11:34 - INFO - Epoch 039 | Val Loss: 44.6977
+2025-03-05 21:11:34 - INFO - Epoch 040 | Val Loss: 55.4040
+2025-03-05 21:11:34 - INFO - Epoch 041 | Val Loss: 48.7417
+2025-03-05 21:11:34 - INFO - Epoch 042 | Val Loss: 50.0058
+2025-03-05 21:11:34 - INFO - Epoch 043 | Val Loss: 48.3820
+2025-03-05 21:11:34 - INFO - Epoch 044 | Val Loss: 42.8773
+2025-03-05 21:11:34 - INFO - Epoch 045 | Val Loss: 43.9849
+2025-03-05 21:11:34 - INFO - Epoch 046 | Val Loss: 42.9290
+2025-03-05 21:11:34 - INFO - Epoch 047 | Val Loss: 47.1086
+2025-03-05 21:11:34 - INFO - Epoch 048 | Val Loss: 43.3852
+2025-03-05 21:11:34 - INFO - Epoch 049 | Val Loss: 45.8590
+2025-03-05 21:11:34 - INFO - Epoch 050 | Val Loss: 47.1716
+2025-03-05 21:11:34 - INFO - Epoch 051 | Val Loss: 45.9193
+2025-03-05 21:11:34 - INFO - Epoch 052 | Val Loss: 43.7599
+2025-03-05 21:11:34 - INFO - Epoch 053 | Val Loss: 44.6429
+2025-03-05 21:11:35 - INFO - Epoch 054 | Val Loss: 46.1124
+2025-03-05 21:11:35 - INFO - Epoch 055 | Val Loss: 42.0233
+2025-03-05 21:11:35 - INFO - Epoch 056 | Val Loss: 47.6969
+2025-03-05 21:11:35 - INFO - Epoch 057 | Val Loss: 47.7041
+2025-03-05 21:11:35 - INFO - Epoch 058 | Val Loss: 45.0109
+2025-03-05 21:11:35 - INFO - Epoch 059 | Val Loss: 48.1707
+2025-03-05 21:11:35 - INFO - Epoch 060 | Val Loss: 50.7562
+2025-03-05 21:11:35 - INFO - Epoch 061 | Val Loss: 46.2473
+2025-03-05 21:11:35 - INFO - Epoch 062 | Val Loss: 43.3176
+2025-03-05 21:11:35 - INFO - Epoch 063 | Val Loss: 45.6804
+2025-03-05 21:11:35 - INFO - Epoch 064 | Val Loss: 43.7210
+2025-03-05 21:11:35 - INFO - Epoch 065 | Val Loss: 42.3064
+2025-03-05 21:11:35 - INFO - Epoch 066 | Val Loss: 45.6836
+2025-03-05 21:11:35 - INFO - Epoch 067 | Val Loss: 44.2554
+2025-03-05 21:11:35 - INFO - Epoch 068 | Val Loss: 43.0601
+2025-03-05 21:11:35 - INFO - Epoch 069 | Val Loss: 47.0856
+2025-03-05 21:11:35 - INFO - Epoch 070 | Val Loss: 43.8963
+2025-03-05 21:11:35 - INFO - Epoch 071 | Val Loss: 47.4228
+2025-03-05 21:11:36 - INFO - Epoch 072 | Val Loss: 41.5802
+2025-03-05 21:11:36 - INFO - Epoch 073 | Val Loss: 46.2445
+2025-03-05 21:11:36 - INFO - Epoch 074 | Val Loss: 47.5176
+2025-03-05 21:11:36 - INFO - Epoch 075 | Val Loss: 51.9917
+2025-03-05 21:11:36 - INFO - Epoch 076 | Val Loss: 43.8881
+2025-03-05 21:11:36 - INFO - Epoch 077 | Val Loss: 48.4373
+2025-03-05 21:11:36 - INFO - Epoch 078 | Val Loss: 52.9141
+2025-03-05 21:11:36 - INFO - Epoch 079 | Val Loss: 48.4804
+2025-03-05 21:11:36 - INFO - Epoch 080 | Val Loss: 45.8922
+2025-03-05 21:11:36 - INFO - Epoch 081 | Val Loss: 44.7757
+2025-03-05 21:11:36 - INFO - Epoch 082 | Val Loss: 44.3503
+2025-03-05 21:11:36 - INFO - Epoch 083 | Val Loss: 49.7787
+2025-03-05 21:11:36 - INFO - Epoch 084 | Val Loss: 47.7798
+2025-03-05 21:11:36 - INFO - Epoch 085 | Val Loss: 46.5761
+2025-03-05 21:11:36 - INFO - Epoch 086 | Val Loss: 45.0036
+2025-03-05 21:11:36 - INFO - Epoch 087 | Val Loss: 42.1445
+2025-03-05 21:11:36 - INFO - Epoch 088 | Val Loss: 47.0921
+2025-03-05 21:11:37 - INFO - Epoch 089 | Val Loss: 49.6629
+2025-03-05 21:11:37 - INFO - Epoch 090 | Val Loss: 45.2950
+2025-03-05 21:11:37 - INFO - Epoch 091 | Val Loss: 45.7430
+2025-03-05 21:11:37 - INFO - Epoch 092 | Val Loss: 42.8775
+2025-03-05 21:11:37 - INFO - Epoch 093 | Val Loss: 46.2509
+2025-03-05 21:11:37 - INFO - Epoch 094 | Val Loss: 49.3300
+2025-03-05 21:11:37 - INFO - Epoch 095 | Val Loss: 49.8070
+2025-03-05 21:11:37 - INFO - Epoch 096 | Val Loss: 44.0020
+2025-03-05 21:11:37 - INFO - Epoch 097 | Val Loss: 41.2164
+2025-03-05 21:11:37 - INFO - Epoch 098 | Val Loss: 46.8664
+2025-03-05 21:11:37 - INFO - Epoch 099 | Val Loss: 49.0339
+2025-03-05 21:11:37 - INFO - Epoch 100 | Val Loss: 45.1335
+2025-03-05 21:11:37 - INFO - Fold 5 | Best Val Loss: 38.9739
+2025-03-05 21:11:37 - INFO - K-Fold Cross Validation Results:
+2025-03-05 21:11:37 - INFO - Fold 1 | Val Loss: 49.8505
+2025-03-05 21:11:37 - INFO - Fold 2 | Val Loss: 39.2664
+2025-03-05 21:11:37 - INFO - Fold 3 | Val Loss: 42.3300
+2025-03-05 21:11:37 - INFO - Fold 4 | Val Loss: 37.7635
+2025-03-05 21:11:37 - INFO - Fold 5 | Val Loss: 38.9739
+2025-03-05 21:11:37 - INFO - Average Val Loss: 41.6369
