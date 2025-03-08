@@ -5,6 +5,7 @@ from models.mlp import MLP
 from models.lstm import LSTM
 from models.gru import GRU
 from models.transformer import Transformer
+from tqdm import tqdm
 
 
 def test(model, test_loader, args):
@@ -14,43 +15,28 @@ def test(model, test_loader, args):
 
     test_results = []
     with torch.no_grad():
-        # for inputs, labels, lengths in test_loader:
-        for idx, (inputs, labels, lengths) in enumerate(test_loader):
-            if idx == len(test_loader)-1:
-                print(1)
-            inputs, labels, lengths = inputs[:,:,:4].to(device), labels[:,:,:4].to(device), lengths.to(device)
+        # for inputs, labels in test_loader:
+        for idx, (inputs, labels) in tqdm(enumerate(test_loader), desc=f'Testing: '):
+            inputs, labels = inputs[:,:,:3].to(device), labels[:,2].unsqueeze(1).to(device)
 
-            # 生成mask
-            batch_size, seq_len = inputs.shape[:2]
-            mask = torch.zeros(batch_size, seq_len, device=device)
-            for i in range(batch_size):
-                mask[i, :lengths[i]] = 1
-
-            # 模型前向
-            if isinstance(model, Transformer):
-                src_key_padding_mask = (mask == 0)
-                outputs = model(inputs, src_key_padding_mask=src_key_padding_mask)
-            elif isinstance(model, (LSTM, GRU)):
-                outputs = model(inputs, lengths)
-            else:
-                outputs = model(inputs)
+            outputs = model(inputs)
 
             # 计算损失
-            loss = criterion(outputs, labels, mask).item()
+            loss = criterion(outputs, labels).item()
 
             # 反标准化
-            raw_input = inputs * test_loader.dataset.input_std[:4].to(device) + test_loader.dataset.input_mean[:4].to(device)
-            modification = outputs * test_loader.dataset.label_std[:4].to(device) + test_loader.dataset.label_mean[:4].to(device)
-            raw_label = labels * test_loader.dataset.label_std[:4].to(device) + test_loader.dataset.label_mean[:4].to(device)
+            inputs_certer = inputs[:,inputs.shape[1]//2,:]
+            raw_input = inputs_certer * test_loader.dataset.input_std[:3].to(device) + test_loader.dataset.input_mean[:3].to(device)
+            modification = outputs * test_loader.dataset.label_std[2].to(device) + test_loader.dataset.label_mean[2].to(device)
+            raw_label = labels * test_loader.dataset.label_std[2].to(device) + test_loader.dataset.label_mean[2].to(device)
 
             # 去除填充数据
-            for i in range(batch_size):
-                length = lengths[i].item()
+            sequence_size = inputs.shape[0]
+            for i in range(sequence_size):
                 test_results.append({
-                    'raw_input': raw_input[i,:length].cpu().numpy(),
-                    'modification': modification[i,:length].cpu().numpy(),
-                    'raw_label': raw_label[i,:length].cpu().numpy(),
-                    'length': length,
+                    'raw_input': raw_input[i,:].cpu().numpy(),
+                    'modification': modification[i,:].cpu().numpy(),
+                    'raw_label': raw_label[i,:].cpu().numpy(),
                     'loss': loss
                 })
 

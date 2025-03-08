@@ -7,19 +7,30 @@ class HybridLoss(nn.Module):
     def __init__(self, alpha):
         super().__init__()
         self.alpha = alpha
-        self.mse = nn.MSELoss(reduction='none')
+        # reduction='none'：表示不进行任何聚合操作，返回每个元素的损失值。输出的形状与输入的形状相同。
+        # reduction='mean'：表示对所有元素的损失值取平均，返回一个标量。
+        # reduction='sum'：表示对所有元素的损失值求和，返回一个标量。
+        # self.mse = nn.MSELoss(reduction='none')
+        self.mse = nn.MSELoss(reduction='mean')
 
-    def forward(self, pred, target, mask):
-        # 扩展mask维度
-        mask = mask.unsqueeze(-1).expand_as(pred)
-        valid_elements = mask.sum()
-
+    # def forward(self, pred, target):
+    #     # 时域损失
+    #     time_loss = self.mse(pred, target)
+    #
+    #     # 频域损失
+    #     pred_fft = torch.fft.fft(pred, dim=1)
+    #     target_fft = torch.fft.fft(target, dim=1)
+    #     freq_loss = self.mse(torch.abs(pred_fft), torch.abs(target_fft))
+    #
+    #     return self.alpha * time_loss + (1 - self.alpha) * freq_loss
+    def forward(self, pred, target):
         # 时域损失
-        time_loss = (self.mse(pred, target) * mask).sum() / valid_elements
+        # time_loss = self.mse(pred, target)
 
-        # 频域损失
+        # 频域损失【结果是复数!】
         pred_fft = torch.fft.fft(pred, dim=1)
         target_fft = torch.fft.fft(target, dim=1)
-        freq_loss = (self.mse(torch.abs(pred_fft), torch.abs(target_fft)) * mask).sum() / valid_elements
+        # 这里计算的是复数赋值（模）的均方误差
+        freq_loss = self.mse(torch.abs(pred_fft), torch.abs(target_fft))
 
-        return self.alpha * time_loss + (1 - self.alpha) * freq_loss
+        return freq_loss

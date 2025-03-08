@@ -1,0 +1,5 @@
+2025-03-08 15:39:47 - INFO - Model save directory: ./model_checkpoints
+2025-03-08 15:40:07 - INFO - Total number of samples: 311871
+2025-03-08 15:40:07 - INFO - Fold 1/5
+2025-03-08 15:40:07 - INFO - Number of train samples: 249496
+2025-03-08 15:40:07 - INFO - Number of val samples: 62375

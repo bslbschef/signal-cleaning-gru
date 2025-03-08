@@ -35,5 +35,5 @@ class LSTMWithMLP(nn.Module):
         output = self.mlp(last_output)
 
         # 调整输出形状为 (batch_size, 1, output_size)
-        output = output.unsqueeze(1)
+        # output = output.unsqueeze(1)
         return output

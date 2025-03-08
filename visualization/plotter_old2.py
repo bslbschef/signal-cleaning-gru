@@ -9,20 +9,22 @@ def plot_comparison(test_results, model_name, result_dir):
     all_raw_input = []
     all_modification = []
     all_raw_label = []
-    all_loss = []
+    all_lengths = []
+    all_losses = []
 
     for result in test_results:
         all_raw_input.append(result['raw_input'])
         all_modification.append(result['modification'])
         all_raw_label.append(result['raw_label'])
-        all_loss.append(result['loss'])
+        all_lengths.append(result['length'])
+        all_losses.append(result['loss'])
 
     # 将列表转换为 numpy 数组
-    all_raw_input = np.array(all_raw_input)
-    all_modification = np.array(all_modification)
-    all_raw_label = np.array(all_raw_label)
-    all_loss = np.array(all_loss)
-    total_length = len(all_raw_input)
+    all_raw_input = np.concatenate(all_raw_input, axis=0)
+    all_modification = np.concatenate(all_modification, axis=0)
+    all_raw_label = np.concatenate(all_raw_label, axis=0)
+    all_lengths = np.array(all_lengths)
+    total_length = np.sum(all_lengths)
 
     # 绘制每个特征的对比图
     timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
@@ -30,7 +32,7 @@ def plot_comparison(test_results, model_name, result_dir):
     for ch in range(4):
         # 创建图形
         fig, ax = plt.subplots(figsize=(12, 8))
-        fig.suptitle(f'Merged Test Samples - Model: {model_name} - Feature {feature_names[ch]} - Total Loss: {np.mean(all_loss):.4f}')
+        fig.suptitle(f'Merged Test Samples - Model: {model_name} - Feature {feature_names[ch]} - Total Loss: {np.mean(all_losses):.4f}')
 
         ax.plot(all_raw_input[:, ch], label='Raw Input', linestyle='--')
         ax.plot(all_modification[:, ch], label='Modification')

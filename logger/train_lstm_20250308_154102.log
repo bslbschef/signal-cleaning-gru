@@ -1,0 +1,119 @@
+2025-03-08 15:41:02 - INFO - Model save directory: ./model_checkpoints
+2025-03-08 15:41:22 - INFO - Total number of samples: 311871
+2025-03-08 15:41:22 - INFO - Fold 1/5
+2025-03-08 15:41:22 - INFO - Number of train samples: 249496
+2025-03-08 15:41:22 - INFO - Number of val samples: 62375
+2025-03-08 15:43:08 - INFO - Epoch 001 | Train Loss: 23.1316 | Val Loss: 20.5513
+2025-03-08 15:43:08 - INFO - Saved best model for fold 1 with Val Loss: 20.5513
+2025-03-08 15:44:58 - INFO - Epoch 002 | Train Loss: 20.5730 | Val Loss: 20.4441
+2025-03-08 15:44:58 - INFO - Saved best model for fold 1 with Val Loss: 20.4441
+2025-03-08 15:46:45 - INFO - Epoch 003 | Train Loss: 20.4691 | Val Loss: 20.2666
+2025-03-08 15:46:45 - INFO - Saved best model for fold 1 with Val Loss: 20.2666
+2025-03-08 15:48:32 - INFO - Epoch 004 | Train Loss: 20.1771 | Val Loss: 20.0963
+2025-03-08 15:48:32 - INFO - Saved best model for fold 1 with Val Loss: 20.0963
+2025-03-08 15:50:19 - INFO - Epoch 005 | Train Loss: 20.0537 | Val Loss: 19.9291
+2025-03-08 15:50:19 - INFO - Saved best model for fold 1 with Val Loss: 19.9291
+2025-03-08 15:52:06 - INFO - Epoch 006 | Train Loss: 19.9502 | Val Loss: 19.8545
+2025-03-08 15:52:06 - INFO - Saved best model for fold 1 with Val Loss: 19.8545
+2025-03-08 15:53:52 - INFO - Epoch 007 | Train Loss: 19.8576 | Val Loss: 19.7698
+2025-03-08 15:53:52 - INFO - Saved best model for fold 1 with Val Loss: 19.7698
+2025-03-08 15:55:38 - INFO - Epoch 008 | Train Loss: 19.7549 | Val Loss: 19.6355
+2025-03-08 15:55:38 - INFO - Saved best model for fold 1 with Val Loss: 19.6355
+2025-03-08 15:57:24 - INFO - Epoch 009 | Train Loss: 19.6477 | Val Loss: 19.5236
+2025-03-08 15:57:24 - INFO - Saved best model for fold 1 with Val Loss: 19.5236
+2025-03-08 15:59:10 - INFO - Epoch 010 | Train Loss: 19.5634 | Val Loss: 19.4975
+2025-03-08 15:59:10 - INFO - Saved best model for fold 1 with Val Loss: 19.4975
+2025-03-08 15:59:10 - INFO - Fold 1 | Best Val Loss: 19.4975
+2025-03-08 15:59:10 - INFO - Fold 2/5
+2025-03-08 15:59:10 - INFO - Number of train samples: 249497
+2025-03-08 15:59:10 - INFO - Number of val samples: 62374
+2025-03-08 16:01:00 - INFO - Epoch 001 | Train Loss: 16.0778 | Val Loss: 12.3978
+2025-03-08 16:01:00 - INFO - Saved best model for fold 2 with Val Loss: 12.3978
+2025-03-08 16:02:46 - INFO - Epoch 002 | Train Loss: 12.0046 | Val Loss: 11.9091
+2025-03-08 16:02:46 - INFO - Saved best model for fold 2 with Val Loss: 11.9091
+2025-03-08 16:04:34 - INFO - Epoch 003 | Train Loss: 11.8077 | Val Loss: 11.7600
+2025-03-08 16:04:34 - INFO - Saved best model for fold 2 with Val Loss: 11.7600
+2025-03-08 16:06:19 - INFO - Epoch 004 | Train Loss: 11.6988 | Val Loss: 11.6380
+2025-03-08 16:06:19 - INFO - Saved best model for fold 2 with Val Loss: 11.6380
+2025-03-08 16:08:04 - INFO - Epoch 005 | Train Loss: 11.5062 | Val Loss: 11.2708
+2025-03-08 16:08:04 - INFO - Saved best model for fold 2 with Val Loss: 11.2708
+2025-03-08 16:09:51 - INFO - Epoch 006 | Train Loss: 11.1202 | Val Loss: 11.1336
+2025-03-08 16:09:51 - INFO - Saved best model for fold 2 with Val Loss: 11.1336
+2025-03-08 16:11:37 - INFO - Epoch 007 | Train Loss: 10.9478 | Val Loss: 10.8356
+2025-03-08 16:11:37 - INFO - Saved best model for fold 2 with Val Loss: 10.8356
+2025-03-08 16:13:26 - INFO - Epoch 008 | Train Loss: 10.7776 | Val Loss: 10.6979
+2025-03-08 16:13:26 - INFO - Saved best model for fold 2 with Val Loss: 10.6979
+2025-03-08 16:15:14 - INFO - Epoch 009 | Train Loss: 10.7075 | Val Loss: 10.7062
+2025-03-08 16:17:02 - INFO - Epoch 010 | Train Loss: 10.6696 | Val Loss: 10.7533
+2025-03-08 16:17:02 - INFO - Fold 2 | Best Val Loss: 10.6979
+2025-03-08 16:17:02 - INFO - Fold 3/5
+2025-03-08 16:17:02 - INFO - Number of train samples: 249497
+2025-03-08 16:17:02 - INFO - Number of val samples: 62374
+2025-03-08 16:18:48 - INFO - Epoch 001 | Train Loss: 23.7833 | Val Loss: 20.6176
+2025-03-08 16:18:48 - INFO - Saved best model for fold 3 with Val Loss: 20.6176
+2025-03-08 16:20:34 - INFO - Epoch 002 | Train Loss: 20.4291 | Val Loss: 20.2979
+2025-03-08 16:20:34 - INFO - Saved best model for fold 3 with Val Loss: 20.2979
+2025-03-08 16:22:22 - INFO - Epoch 003 | Train Loss: 20.1588 | Val Loss: 20.1813
+2025-03-08 16:22:22 - INFO - Saved best model for fold 3 with Val Loss: 20.1813
+2025-03-08 16:24:15 - INFO - Epoch 004 | Train Loss: 20.0416 | Val Loss: 20.0245
+2025-03-08 16:24:15 - INFO - Saved best model for fold 3 with Val Loss: 20.0245
+2025-03-08 16:26:03 - INFO - Epoch 005 | Train Loss: 19.8261 | Val Loss: 19.7479
+2025-03-08 16:26:03 - INFO - Saved best model for fold 3 with Val Loss: 19.7479
+2025-03-08 16:27:49 - INFO - Epoch 006 | Train Loss: 19.6336 | Val Loss: 19.8524
+2025-03-08 16:29:34 - INFO - Epoch 007 | Train Loss: 19.5630 | Val Loss: 19.6227
+2025-03-08 16:29:34 - INFO - Saved best model for fold 3 with Val Loss: 19.6227
+2025-03-08 16:31:19 - INFO - Epoch 008 | Train Loss: 19.5239 | Val Loss: 19.5619
+2025-03-08 16:31:19 - INFO - Saved best model for fold 3 with Val Loss: 19.5619
+2025-03-08 16:33:04 - INFO - Epoch 009 | Train Loss: 19.4792 | Val Loss: 19.5785
+2025-03-08 16:34:49 - INFO - Epoch 010 | Train Loss: 19.4528 | Val Loss: 19.4873
+2025-03-08 16:34:49 - INFO - Saved best model for fold 3 with Val Loss: 19.4873
+2025-03-08 16:34:50 - INFO - Fold 3 | Best Val Loss: 19.4873
+2025-03-08 16:34:50 - INFO - Fold 4/5
+2025-03-08 16:34:50 - INFO - Number of train samples: 249497
+2025-03-08 16:34:50 - INFO - Number of val samples: 62374
+2025-03-08 16:36:34 - INFO - Epoch 001 | Train Loss: 9.6876 | Val Loss: 4.9451
+2025-03-08 16:36:34 - INFO - Saved best model for fold 4 with Val Loss: 4.9451
+2025-03-08 16:38:19 - INFO - Epoch 002 | Train Loss: 4.4468 | Val Loss: 17.7908
+2025-03-08 16:40:04 - INFO - Epoch 003 | Train Loss: 4.3337 | Val Loss: 4.0058
+2025-03-08 16:40:04 - INFO - Saved best model for fold 4 with Val Loss: 4.0058
+2025-03-08 16:41:50 - INFO - Epoch 004 | Train Loss: 3.8114 | Val Loss: 3.6435
+2025-03-08 16:41:50 - INFO - Saved best model for fold 4 with Val Loss: 3.6435
+2025-03-08 16:43:36 - INFO - Epoch 005 | Train Loss: 3.5297 | Val Loss: 3.3468
+2025-03-08 16:43:36 - INFO - Saved best model for fold 4 with Val Loss: 3.3468
+2025-03-08 16:45:24 - INFO - Epoch 006 | Train Loss: 5.1554 | Val Loss: 4.0143
+2025-03-08 16:47:09 - INFO - Epoch 007 | Train Loss: 3.8442 | Val Loss: 3.7751
+2025-03-08 16:48:54 - INFO - Epoch 008 | Train Loss: 3.5131 | Val Loss: 3.4776
+2025-03-08 16:50:40 - INFO - Epoch 009 | Train Loss: 3.1324 | Val Loss: 2.9663
+2025-03-08 16:50:40 - INFO - Saved best model for fold 4 with Val Loss: 2.9663
+2025-03-08 16:52:25 - INFO - Epoch 010 | Train Loss: 2.8828 | Val Loss: 3.0115
+2025-03-08 16:52:25 - INFO - Fold 4 | Best Val Loss: 2.9663
+2025-03-08 16:52:25 - INFO - Fold 5/5
+2025-03-08 16:52:25 - INFO - Number of train samples: 249497
+2025-03-08 16:52:25 - INFO - Number of val samples: 62374
+2025-03-08 16:54:10 - INFO - Epoch 001 | Train Loss: 16.9231 | Val Loss: 12.1607
+2025-03-08 16:54:10 - INFO - Saved best model for fold 5 with Val Loss: 12.1607
+2025-03-08 16:55:55 - INFO - Epoch 002 | Train Loss: 11.9509 | Val Loss: 11.8254
+2025-03-08 16:55:55 - INFO - Saved best model for fold 5 with Val Loss: 11.8254
+2025-03-08 16:57:40 - INFO - Epoch 003 | Train Loss: 11.8723 | Val Loss: 11.7177
+2025-03-08 16:57:40 - INFO - Saved best model for fold 5 with Val Loss: 11.7177
+2025-03-08 16:59:27 - INFO - Epoch 004 | Train Loss: 11.7450 | Val Loss: 11.8440
+2025-03-08 17:01:15 - INFO - Epoch 005 | Train Loss: 11.3029 | Val Loss: 11.1397
+2025-03-08 17:01:15 - INFO - Saved best model for fold 5 with Val Loss: 11.1397
+2025-03-08 17:03:01 - INFO - Epoch 006 | Train Loss: 11.1352 | Val Loss: 11.0404
+2025-03-08 17:03:01 - INFO - Saved best model for fold 5 with Val Loss: 11.0404
+2025-03-08 17:04:48 - INFO - Epoch 007 | Train Loss: 11.0090 | Val Loss: 10.8450
+2025-03-08 17:04:48 - INFO - Saved best model for fold 5 with Val Loss: 10.8450
+2025-03-08 17:06:33 - INFO - Epoch 008 | Train Loss: 10.9042 | Val Loss: 10.7050
+2025-03-08 17:06:33 - INFO - Saved best model for fold 5 with Val Loss: 10.7050
+2025-03-08 17:08:18 - INFO - Epoch 009 | Train Loss: 10.7801 | Val Loss: 10.6484
+2025-03-08 17:08:18 - INFO - Saved best model for fold 5 with Val Loss: 10.6484
+2025-03-08 17:10:04 - INFO - Epoch 010 | Train Loss: 10.6548 | Val Loss: 10.4472
+2025-03-08 17:10:04 - INFO - Saved best model for fold 5 with Val Loss: 10.4472
+2025-03-08 17:10:04 - INFO - Fold 5 | Best Val Loss: 10.4472
+2025-03-08 17:10:04 - INFO - K-Fold Cross Validation Results:
+2025-03-08 17:10:04 - INFO - Fold 1 | Val Loss: 19.4975
+2025-03-08 17:10:04 - INFO - Fold 2 | Val Loss: 10.6979
+2025-03-08 17:10:04 - INFO - Fold 3 | Val Loss: 19.4873
+2025-03-08 17:10:04 - INFO - Fold 4 | Val Loss: 2.9663
+2025-03-08 17:10:04 - INFO - Fold 5 | Val Loss: 10.4472
+2025-03-08 17:10:04 - INFO - Average Val Loss: 12.6192

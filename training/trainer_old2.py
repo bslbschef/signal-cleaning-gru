@@ -1,8 +1,6 @@
 import os
 import torch
 import torch.optim as optim
-from tqdm import tqdm
-
 from losses.hybrid_loss import HybridLoss
 from models.lstm import LSTM
 from models.gru import GRU
@@ -19,19 +17,30 @@ def train(model, train_loader, val_loader, args, fold, logger):
     train_losses = []
     val_losses = []
 
-    # for epoch in range(args.epochs):
-    for epoch in tqdm(range(args.epochs), desc=f'Training Fold {fold + 1}'):
+    for epoch in range(args.epochs):
         model.train()
         train_loss = 0.0
-        # for inputs, labels in train_loader:
-        for inputs, labels in tqdm(train_loader, desc=f'Epoch {epoch + 1:03d}'):
-            inputs, labels = inputs[:,:,:3].to(device), labels[:,2].unsqueeze(1).to(device)
+        for inputs, labels, lengths in train_loader:
+            inputs, labels, lengths = inputs[:,:,:4].to(device), labels[:,:,:4].to(device), lengths.to(device)
+            # 生成mask
+            batch_size, seq_len = inputs.shape[:2]
+            mask = torch.zeros(batch_size, seq_len, device=device)
+            for i in range(batch_size):
+                mask[i, :lengths[i]] = 1
+
             optimizer.zero_grad()
 
-            outputs = model(inputs)
+            # 模型前向
+            if isinstance(model, Transformer):
+                src_key_padding_mask = (mask == 0)
+                outputs = model(inputs, src_key_padding_mask=src_key_padding_mask)
+            elif isinstance(model, (LSTM, GRU)):
+                outputs = model(inputs, lengths)
+            else:
+                outputs = model(inputs)
 
             # 计算损失
-            loss = criterion(outputs, labels)
+            loss = criterion(outputs, labels, mask)
             loss.backward()
             optimizer.step()
             train_loss += loss.item()
@@ -43,12 +52,23 @@ def train(model, train_loader, val_loader, args, fold, logger):
         model.eval()
         val_loss = 0.0
         with torch.no_grad():
-            for inputs, labels in val_loader:
-                inputs, labels = inputs[:,:,:3].to(device), labels[:,2].unsqueeze(1).to(device)
+            for inputs, labels, lengths in val_loader:
+                inputs, labels, lengths = inputs[:,:,:4].to(device), labels[:,:,:4].to(device), lengths.to(device)
 
-                outputs = model(inputs)
+                batch_size, seq_len = inputs.shape[:2]
+                mask = torch.zeros(batch_size, seq_len, device=device)
+                for i in range(batch_size):
+                    mask[i, :lengths[i]] = 1
 
-                val_loss += criterion(outputs, labels).item()
+                if isinstance(model, Transformer):
+                    src_key_padding_mask = (mask == 0)
+                    outputs = model(inputs, src_key_padding_mask=src_key_padding_mask)
+                elif isinstance(model, (LSTM, GRU)):
+                    outputs = model(inputs, lengths)
+                else:
+                    outputs = model(inputs)
+
+                val_loss += criterion(outputs, labels, mask).item()
 
         avg_val_loss = val_loss / len(val_loader)
         val_losses.append(avg_val_loss)

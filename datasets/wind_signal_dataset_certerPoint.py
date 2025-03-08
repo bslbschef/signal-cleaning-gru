@@ -8,7 +8,7 @@ class WindSignalDataset(Dataset):
         self.max_seq_len = max_seq_len
         self.inputs = []
         self.labels = []
-        self.lengths = []
+        # self.lengths = []
 
         # 获取文件列表并排序
         input_files = sorted(os.listdir(input_dir))
@@ -69,7 +69,7 @@ class WindSignalDataset(Dataset):
                 # 转换为Tensor
                 self.inputs.append(torch.FloatTensor(segment_input))
                 self.labels.append(torch.FloatTensor(segment_label))
-                self.lengths.append(max_seq_len)
+                # self.lengths.append(max_seq_len)
 
         # 替换原有标准化参数计算
         self.input_mean = torch.FloatTensor(sum_input / count)
@@ -85,9 +85,16 @@ class WindSignalDataset(Dataset):
     def __len__(self):
         return len(self.inputs)
 
+
+    # 当调用以下for循环时，会自动调用__getitem__方法！！！
+    # dataset = WindSignalDataset(input_dir, label_dir, max_seq_len)
+    # dataloader = torch.utils.data.DataLoader(dataset, batch_size=32, shuffle=True)
+    # for batch_inputs, batch_labels, batch_lengths in dataloader:
+    #     # 处理每个批次的数据
+    #     pass
     def __getitem__(self, idx):
         return (
             self.inputs[idx],
             self.labels[idx],
-            torch.tensor(self.lengths[idx], dtype=torch.long)
+            # torch.tensor(self.lengths[idx], dtype=torch.long)
         )

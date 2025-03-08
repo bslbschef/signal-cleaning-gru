@@ -30,8 +30,11 @@ if __name__ == '__main__':
     dataset = WindSignalDataset(args.input_dir, args.label_dir, args.max_seq_len)
     logger.info(f'Total number of samples: {len(dataset)}')
 
-    # K 折交叉验证
+    # K 折交叉验证【k=1时，表示整个数据集既是训练集又是测试集!】
     k_folds = args.k_folds
+    # random_state 是 KFold 类中的一个参数，用于控制数据集划分的随机性。
+    # 具体来说，random_state 用于设置随机种子，确保每次运行代码时，数据集的划分方式是相同的。这对于可重复性和调试非常有用！
+    # 默认值：None，表示不设置随机种子，每次运行时划分顺序可能不同。
     kfold = KFold(n_splits=k_folds, shuffle=True, random_state=42)
 
     # 用于存储每个折的验证损失
