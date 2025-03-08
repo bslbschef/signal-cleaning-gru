@@ -21,7 +21,7 @@ def parse_args():
     parser.add_argument('--nhead', type=int, default=4)
     parser.add_argument('--num_layers', type=int, default=2)
     parser.add_argument('--alpha', type=float, default=0.7)
-    parser.add_argument('--max_seq_len', type=int, default=20*60*1)
+    parser.add_argument('--max_seq_len', type=int, default=20*60*1-1)
     parser.add_argument('--k_folds', type=int, default=5)  # 添加 K 折交叉验证的参数
     parser.add_argument('--model_save_dir', type=str, default='./model_checkpoints')  # 添加模型存储地址的参数
     parser.add_argument('--logger_dir', type=str, default='./logger')  # 添加模型存储地址的参数

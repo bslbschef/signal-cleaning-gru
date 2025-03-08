@@ -9,6 +9,9 @@ class WindSignalDataset(Dataset):
         self.inputs = []
         self.labels = []
         self.lengths = []
+        # 以下两个变量为局部变量，仅在init函数中出现，init结束后，将不再被需要！
+        all_valid_inputs = []
+        all_valid_labels = []
 
         # 获取文件列表并排序
         input_files = sorted(os.listdir(input_dir))
@@ -33,13 +36,6 @@ class WindSignalDataset(Dataset):
             # 处理序列长度
             original_len = input_data.shape[0]
 
-            # 修改后的核心逻辑（替换原有收集数据的逻辑）
-            sum_input = np.zeros((input_data.shape[1],), dtype=np.float32)  # 按特征维度初始化
-            sum_sq_input = np.zeros_like(sum_input)
-            sum_label = np.zeros((label_data.shape[1],), dtype=np.float32)  # 假设label是二维的
-            sum_sq_label = np.zeros_like(sum_label)
-            count = 0
-
             # 生成以每个数据点为中心的数据段
             for center_idx in range(original_len):
                 start_idx = max(0, center_idx - max_seq_len // 2)
@@ -59,23 +55,24 @@ class WindSignalDataset(Dataset):
                 if pad_right > 0:
                     segment_input = np.pad(segment_input, ((0, pad_right), (0, 0)), mode='constant', constant_values=0)
 
-                # 替换原有收集逻辑为在线统计
-                sum_input += np.sum(segment_input, axis=0)  # 按特征维度累加
-                sum_sq_input += np.sum(segment_input ** 2, axis=0)  # 按特征维度累加平方
-                sum_label += segment_label
-                sum_sq_label += segment_label ** 2
-                count += segment_input.shape[0]  # 累计样本数
+                # 收集有效数据用于标准化
+                all_valid_inputs.append(segment_input)
+                all_valid_labels.append(segment_label)
 
                 # 转换为Tensor
                 self.inputs.append(torch.FloatTensor(segment_input))
                 self.labels.append(torch.FloatTensor(segment_label))
                 self.lengths.append(max_seq_len)
+            
 
-        # 替换原有标准化参数计算
-        self.input_mean = torch.FloatTensor(sum_input / count)
-        self.input_std = torch.FloatTensor(np.sqrt(sum_sq_input / count - (sum_input / count) ** 2))
-        self.label_mean = torch.FloatTensor(sum_label / len(self.labels))
-        self.label_std = torch.FloatTensor(np.sqrt(sum_sq_label / len(self.labels) - (sum_label / len(self.labels)) ** 2))
+        # 计算标准化参数（仅使用有效数据）
+        all_valid_inputs = np.concatenate(all_valid_inputs)
+        all_valid_labels = np.array(all_valid_labels)
+
+        self.input_mean = torch.FloatTensor(np.mean(all_valid_inputs, axis=0))
+        self.input_std = torch.FloatTensor(np.std(all_valid_inputs, axis=0))
+        self.label_mean = torch.FloatTensor(np.mean(all_valid_labels, axis=0))
+        self.label_std = torch.FloatTensor(np.std(all_valid_labels, axis=0))
 
         # 应用标准化
         for i in range(len(self.inputs)):
