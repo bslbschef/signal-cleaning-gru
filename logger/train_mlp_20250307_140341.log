@@ -1,0 +1,14 @@
+2025-03-07 14:03:41 - INFO - Model save directory: ./model_checkpoints
+2025-03-07 14:03:42 - INFO - Total number of samples: 266
+2025-03-07 14:03:42 - INFO - Fold 1/5
+2025-03-07 14:03:42 - INFO - Number of train samples: 212
+2025-03-07 14:03:42 - INFO - Number of val samples: 54
+2025-03-07 14:03:45 - INFO - Epoch 001 | Train Loss: 166.0224 | Val Loss: 105.1302
+2025-03-07 14:03:45 - INFO - Saved best model for fold 1 with Val Loss: 105.1302
+2025-03-07 14:03:45 - INFO - Epoch 002 | Train Loss: 84.2124 | Val Loss: 80.7696
+2025-03-07 14:03:45 - INFO - Saved best model for fold 1 with Val Loss: 80.7696
+2025-03-07 14:03:46 - INFO - Epoch 003 | Train Loss: 57.2272 | Val Loss: 65.2579
+2025-03-07 14:03:46 - INFO - Saved best model for fold 1 with Val Loss: 65.2579
+2025-03-07 14:03:46 - INFO - Epoch 004 | Train Loss: 44.9531 | Val Loss: 69.4433
+2025-03-07 14:03:46 - INFO - Epoch 005 | Train Loss: 47.7719 | Val Loss: 60.6993
+2025-03-07 14:03:46 - INFO - Saved best model for fold 1 with Val Loss: 60.6993

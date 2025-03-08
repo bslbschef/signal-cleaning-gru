@@ -3,12 +3,12 @@ import numpy as np
 import torch
 from torch.utils.data import DataLoader
 from sklearn.model_selection import KFold
-from datasets.wind_signal_dataset import WindSignalDataset
+from datasets.wind_signal_dataset_certerPoint import WindSignalDataset
 from training.trainer import train
 from utils.logger_define import CustomLogger
 from utils.args_parser import parse_args
 from models.mlp import MLP
-from models.lstm import LSTM
+from models.lstm_certerPoint import LSTMWithMLP
 from models.gru import GRU
 from models.transformer import Transformer
 
@@ -54,7 +54,7 @@ if __name__ == '__main__':
         if args.model == 'mlp':
             model = MLP(args.input_size, args.output_size, args.hidden_size, args.max_seq_len)
         elif args.model == 'lstm':
-            model = LSTM(args.input_size, args.hidden_size, args.num_layers, args.output_size)
+            model = LSTMWithMLP(args.input_size, args.hidden_size, args.num_layers, args.output_size, args.mlp_hidden_sizes)
         elif args.model == 'gru':
             model = GRU(args.input_size, args.hidden_size, args.num_layers, args.output_size)
         elif args.model == 'transformer':

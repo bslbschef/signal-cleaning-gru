@@ -16,6 +16,8 @@ def parse_args():
     parser.add_argument('--input_size', type=int, default=4)
     parser.add_argument('--hidden_size', type=int, default=128)
     parser.add_argument('--output_size', type=int, default=4)
+    # nargs='+': 表示该参数可以接受一个或多个值，并将这些值作为一个列表返回
+    parser.add_argument('--mlp_hidden_sizes', type=int, nargs='+', default=[64, 32, 16], help='MLP hidden sizes')
     parser.add_argument('--nhead', type=int, default=4)
     parser.add_argument('--num_layers', type=int, default=2)
     parser.add_argument('--alpha', type=float, default=0.7)
