@@ -8,12 +8,19 @@ from models.lstm import LSTM
 from models.gru import GRU
 from models.transformer import Transformer
 import matplotlib.pyplot as plt
+from torch.optim.lr_scheduler import CosineAnnealingLR
+from torch.optim.lr_scheduler import ReduceLROnPlateau
+
 
 def train(model, train_loader, val_loader, args, fold, logger):
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     model = model.to(device)
     optimizer = optim.Adam(model.parameters(), lr=args.lr)
     criterion = HybridLoss(args.alpha)
+
+    # 学习率调度器
+    scheduler = ReduceLROnPlateau(optimizer, mode='min', factor=0.1, patience=30, verbose=True)
+    # scheduler = CosineAnnealingLR(optimizer, T_max=args.cos_rl_circle, eta_min=1e-6)   # T_max = 一个完整的周期的 epoch 数； eta_min = 最小学习率
 
     best_val_loss = float('inf')
     train_losses = []
@@ -25,7 +32,7 @@ def train(model, train_loader, val_loader, args, fold, logger):
         train_loss = 0.0
         # for inputs, labels in train_loader:
         for inputs, labels in tqdm(train_loader, desc=f'Epoch {epoch + 1:03d}'):
-            inputs, labels = inputs[:,:,:3].to(device), labels[:,2].unsqueeze(1).to(device)
+            inputs, labels = torch.cat([inputs[:,:,:3],inputs[:,:,-6:]], dim=2).to(device), labels[:,2].unsqueeze(1).to(device)
             optimizer.zero_grad()
 
             outputs = model(inputs)
@@ -44,7 +51,7 @@ def train(model, train_loader, val_loader, args, fold, logger):
         val_loss = 0.0
         with torch.no_grad():
             for inputs, labels in val_loader:
-                inputs, labels = inputs[:,:,:3].to(device), labels[:,2].unsqueeze(1).to(device)
+                inputs, labels = torch.cat([inputs[:,:,:3],inputs[:,:,-6:]], dim=2).to(device), labels[:,2].unsqueeze(1).to(device)
 
                 outputs = model(inputs)
 
@@ -53,6 +60,10 @@ def train(model, train_loader, val_loader, args, fold, logger):
         avg_val_loss = val_loss / len(val_loader)
         val_losses.append(avg_val_loss)
         logger.info(f'Epoch {epoch + 1:03d} | Train Loss: {avg_train_loss:.4f} | Val Loss: {avg_val_loss:.4f}')
+
+        # 更新学习率调度器
+        scheduler.step(avg_val_loss)       # 逐步减小法
+        # scheduler.step()                   # 余弦退火法
 
         if avg_val_loss < best_val_loss:
             best_val_loss = avg_val_loss

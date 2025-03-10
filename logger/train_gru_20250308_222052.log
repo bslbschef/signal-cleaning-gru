@@ -1,0 +1,18 @@
+2025-03-08 22:20:52 - INFO - Model save directory: ./model_checkpoints
+2025-03-08 22:21:00 - INFO - Total number of samples: 311871
+2025-03-08 22:21:00 - INFO - Fold 1/2
+2025-03-08 22:21:00 - INFO - Number of train samples: 155935
+2025-03-08 22:21:00 - INFO - Number of val samples: 155936
+2025-03-08 22:21:10 - INFO - Epoch 001 | Train Loss: 2.4645 | Val Loss: 0.2713
+2025-03-08 22:21:10 - INFO - Saved best model for fold 1 with Val Loss: 0.2713
+2025-03-08 22:21:10 - INFO - Fold 1 | Best Val Loss: 0.2713
+2025-03-08 22:21:10 - INFO - Fold 2/2
+2025-03-08 22:21:10 - INFO - Number of train samples: 155936
+2025-03-08 22:21:10 - INFO - Number of val samples: 155935
+2025-03-08 22:21:20 - INFO - Epoch 001 | Train Loss: 1.6760 | Val Loss: 0.1883
+2025-03-08 22:21:20 - INFO - Saved best model for fold 2 with Val Loss: 0.1883
+2025-03-08 22:21:20 - INFO - Fold 2 | Best Val Loss: 0.1883
+2025-03-08 22:21:20 - INFO - K-Fold Cross Validation Results:
+2025-03-08 22:21:20 - INFO - Fold 1 | Val Loss: 0.2713
+2025-03-08 22:21:20 - INFO - Fold 2 | Val Loss: 0.1883
+2025-03-08 22:21:20 - INFO - Average Val Loss: 0.2298

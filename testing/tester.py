@@ -17,7 +17,7 @@ def test(model, test_loader, args):
     with torch.no_grad():
         # for inputs, labels in test_loader:
         for idx, (inputs, labels) in tqdm(enumerate(test_loader), desc=f'Testing: '):
-            inputs, labels = inputs[:,:,:3].to(device), labels[:,2].unsqueeze(1).to(device)
+            inputs, labels = torch.cat([inputs[:,:,:3],inputs[:,:,-6:]], dim=2).to(device), labels[:,2].unsqueeze(1).to(device)
 
             outputs = model(inputs)
 
@@ -25,7 +25,7 @@ def test(model, test_loader, args):
             loss = criterion(outputs, labels).item()
 
             # 反标准化
-            inputs_certer = inputs[:,inputs.shape[1]//2,:]
+            inputs_certer = inputs[:,inputs.shape[1]//2,:3]
             raw_input = inputs_certer * test_loader.dataset.input_std[:3].to(device) + test_loader.dataset.input_mean[:3].to(device)
             modification = outputs * test_loader.dataset.label_std[2].to(device) + test_loader.dataset.label_mean[2].to(device)
             raw_label = labels * test_loader.dataset.label_std[2].to(device) + test_loader.dataset.label_mean[2].to(device)

@@ -6,7 +6,7 @@ from utils.logger_define import CustomLogger
 from utils.args_parser import parse_args
 from models.mlp import MLP
 from models.lstm_certerPoint import LSTMWithMLP
-from models.gru import GRU
+from models.gru_certerPoint_multiParallel import GRUWithMLP
 from models.transformer import Transformer
 from testing.tester import test
 from visualization.plotter import plot_comparison
@@ -29,7 +29,7 @@ if __name__ == '__main__':
         model = LSTMWithMLP(args.input_size, args.hidden_size, args.num_layers, args.output_size,
                             args.mlp_hidden_sizes)
     elif args.model == 'gru':
-        model = GRU(args.input_size, args.hidden_size, args.num_layers, args.output_size)
+        model = GRUWithMLP(args.input_size, args.hidden_size, args.num_layers, args.output_size, args.mlp_hidden_sizes)
     elif args.model == 'transformer':
         model = Transformer(args.input_size, args.hidden_size, args.nhead,
                             args.num_layers, args.max_seq_len)

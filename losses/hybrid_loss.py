@@ -13,24 +13,16 @@ class HybridLoss(nn.Module):
         # self.mse = nn.MSELoss(reduction='none')
         self.mse = nn.MSELoss(reduction='mean')
 
-    # def forward(self, pred, target):
-    #     # 时域损失
-    #     time_loss = self.mse(pred, target)
-    #
-    #     # 频域损失
-    #     pred_fft = torch.fft.fft(pred, dim=1)
-    #     target_fft = torch.fft.fft(target, dim=1)
-    #     freq_loss = self.mse(torch.abs(pred_fft), torch.abs(target_fft))
-    #
-    #     return self.alpha * time_loss + (1 - self.alpha) * freq_loss
     def forward(self, pred, target):
         # 时域损失
-        # time_loss = self.mse(pred, target)
+        time_loss = self.mse(pred, target)
 
-        # 频域损失【结果是复数!】
-        pred_fft = torch.fft.fft(pred, dim=1)
-        target_fft = torch.fft.fft(target, dim=1)
-        # 这里计算的是复数赋值（模）的均方误差
-        freq_loss = self.mse(torch.abs(pred_fft), torch.abs(target_fft))
+        # 频域损失
+        # pred_fft = torch.fft.fft(pred, dim=1)
+        # target_fft = torch.fft.fft(target, dim=1)
+        # freq_loss = self.mse(torch.abs(pred_fft), torch.abs(target_fft))
 
-        return freq_loss
+        # return self.alpha * time_loss + (1 - self.alpha) * freq_loss
+        # return freq_loss
+        return time_loss
+
