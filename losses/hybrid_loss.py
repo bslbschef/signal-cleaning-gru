@@ -11,7 +11,7 @@ class HybridLoss(nn.Module):
         # reduction='mean'：表示对所有元素的损失值取平均，返回一个标量。
         # reduction='sum'：表示对所有元素的损失值求和，返回一个标量。
         # self.mse = nn.MSELoss(reduction='none')
-        self.mse = nn.MSELoss(reduction='mean')
+        self.mse = nn.MSELoss(reduction='sum')
 
     def forward(self, pred, target):
         # 时域损失
