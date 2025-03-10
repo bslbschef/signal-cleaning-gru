@@ -80,13 +80,13 @@ if __name__ == '__main__':
                 logger.warning(f'Model file not found: {model_path}. Starting training from scratch.')
         else:
             checkpoint = None
-            
+
         # training!
         best_val_loss = train(model, train_loader, val_loader, args, fold, logger, checkpoint)
         results[fold] = best_val_loss
         logger.info(f'Fold {fold + 1} | Best Val Loss: {best_val_loss:.4f}')
 
-    # logging the invidual and averaged validation loss of all folds!
+    # logging the individual and averaged validation loss of all folds!
     logger.info(f'K-Fold Cross Validation Results:')
     for fold, val_loss in results.items():
         logger.info(f'Fold {fold + 1} | Val Loss: {val_loss:.4f}')
