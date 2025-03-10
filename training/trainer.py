@@ -44,7 +44,7 @@ def train(model, train_loader, val_loader, args, fold, logger, checkpoint=None):
         model.train()
         train_loss = 0.0
         for inputs, labels in tqdm(train_loader, desc=f'Epoch {epoch + 1:03d}'):
-            inputs, labels = torch.cat([inputs[:,:,:3],inputs[:,:,-6:]], dim=2).to(device), labels[:,2].unsqueeze(1).to(device)
+            inputs, labels = torch.cat([inputs[:,:,2],inputs[:,:,-6]], dim=2).to(device), labels[:,2].unsqueeze(1).to(device)
             optimizer.zero_grad()
             outputs = model(inputs)
             loss = criterion(outputs, labels)
@@ -60,7 +60,7 @@ def train(model, train_loader, val_loader, args, fold, logger, checkpoint=None):
         val_loss = 0.0
         with torch.no_grad():
             for inputs, labels in val_loader:
-                inputs, labels = torch.cat([inputs[:,:,:3],inputs[:,:,-6:]], dim=2).to(device), labels[:,2].unsqueeze(1).to(device)
+                inputs, labels = torch.cat([inputs[:,:,2],inputs[:,:,-6]], dim=2).to(device), labels[:,2].unsqueeze(1).to(device)
                 outputs = model(inputs)
                 val_loss += criterion(outputs, labels).item()
 

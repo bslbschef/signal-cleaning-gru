@@ -11,18 +11,18 @@ class HybridLoss(nn.Module):
         # reduction='mean'：表示对所有元素的损失值取平均，返回一个标量。
         # reduction='sum'：表示对所有元素的损失值求和，返回一个标量。
         # self.mse = nn.MSELoss(reduction='none')
-        self.mse = nn.MSELoss(reduction='sum')
+        self.mse = nn.MSELoss(reduction='mean')
 
     def forward(self, pred, target):
         # 时域损失
-        time_loss = self.mse(pred, target)
+        # time_loss = self.mse(pred, target)
 
         # 频域损失
-        # pred_fft = torch.fft.fft(pred, dim=1)
-        # target_fft = torch.fft.fft(target, dim=1)
-        # freq_loss = self.mse(torch.abs(pred_fft), torch.abs(target_fft))
+        pred_fft = torch.fft.fft(pred, dim=1)
+        target_fft = torch.fft.fft(target, dim=1)
+        freq_loss = self.mse(torch.abs(pred_fft), torch.abs(target_fft))
 
         # return self.alpha * time_loss + (1 - self.alpha) * freq_loss
-        # return freq_loss
-        return time_loss
+        return freq_loss
+        # return time_loss
 
