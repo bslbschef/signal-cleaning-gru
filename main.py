@@ -12,7 +12,7 @@ from utils.logger_define import CustomLogger
 from utils.args_parser import parse_args
 
 from models.mlp import MLP
-from models.lstm_certerPoint import LSTMWithMLP
+from models.lstm_certerPoint_multiParallel import LSTMWithMLP
 from models.gru_certerPoint_multiParallel import GRUWithMLP
 from models.transformer import Transformer
 
