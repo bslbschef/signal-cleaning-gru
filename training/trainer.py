@@ -35,7 +35,7 @@ def train(model, train_loader, val_loader, args, fold, logger, checkpoint=None):
         optimizer.load_state_dict(checkpoint['optimizer_state_dict'])
         if scheduler and 'scheduler_state_dict' in checkpoint:
             scheduler.load_state_dict(checkpoint['scheduler_state_dict'])
-        start_epoch = checkpoint['epoch'] + 1  # 从下一个 epoch 开始
+        start_epoch = checkpoint['epoch'] + 1  
         best_val_loss = checkpoint['best_val_loss']
         logger.info(f"Resuming training from epoch {start_epoch}, best_val_loss: {best_val_loss:.4f}")   
 
